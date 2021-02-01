@@ -4,7 +4,8 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 ### Domain of Interest
 
 - Why are you interested in this field/domain?
-
+  Food accessibility has become a major concern for many people during the pandemic, even more so than before. Due to rising unemployment rates and public regulation policies, the previous stability people may have experienced with food has undoubtedly changed. We wanted to investigate the relationship between COVID-19, the number of operating restaurants, and food access points, to discover how much of an effect the pandemic has had on people’s ability to access food, specifically in King County. This will give us a better understanding of the situation, which can help both our own communities as well as others moving forward.
+  
 - What other examples of data driven project have you found related to this domain (share at least 3)?
   1) [How COVID-19 affected the U.S. restaurant industry](https://www.facteus.com/project/the-state-of-the-us-restaurant-industry-during-the-covid-19-pandemic/)
   2) [The correlation between COVID-19 and food insecurity](https://www.bostonindicators.org/reports/report-website-pages/covid_indicators-x2/2020/october/food-insecurity)
