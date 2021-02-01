@@ -27,6 +27,22 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
   3) [COVID-19 in King County dataset](https://www.kingcounty.gov/depts/health/covid-19/data/daily-summary.aspx)
 - How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
+  1) School districts and food banks routinely self-report data to the Human Services Department of Seattle on locations for COVID-19 Emergency Food and Meals. This information is updated and shared every month to enable food accessibility among King County residents.
+  2) The data was compiled from publicly available sources and from self-reporting by business owners through a survey hosted by the City of Seattle.
+  3) The Washington State Department of Health merges data from different laboratories, who are sent test results from testing locations. Since each location collects different information and fields may be left blank, many results will have incomplete information. This data is then cross-referenced with results from hospitals, geographic systems, and other databases to help fill in missing data. 
+
 - How many observations (rows) are in your data?
+  1) 1582 observations
+  2) 2879 observations 
+  3) 1417 observations (ly-counts-rates-by-geography-jan-19.csv)
+  
 - How many features (columns) are in the data?
+  1) 14 features
+  2) 12 features
+  3) 13 features (ly-counts-rates-by-geography-jan-19.csv)
 - What questions (from above) can be answered using the data in this dataset?
+  1) Where are locations in King County with higher density/more access to food sources?
+     Which areas of King County have the highest density of emergency food resources? 
+  2) Which location in King County has the highest number of operating restaurants?
+  3) Which city has the highest death rate / infection rate?
+     Which demographic has the highest death rate / infection rate?
