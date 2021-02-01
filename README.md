@@ -41,6 +41,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
   2) 12 features
   3) 13 features (ly-counts-rates-by-geography-jan-19.csv)
 - What questions (from above) can be answered using the data in this dataset?
+
   1) 
     * Where are locations in King County with higher density/more access to food sources?
     * Which areas of King County have the highest density of emergency food resources? 
