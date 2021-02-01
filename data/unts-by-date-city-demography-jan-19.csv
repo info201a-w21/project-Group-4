@@ -1,0 +1,601 @@
+Age_Group,City,Population,People_Tested,All_Test_Results,Positives,Hospitalizations,Deaths
+0-9,All King County,257228.65,36724,50879,0,0,0
+10-19,All King County,254148.03,60597,106597,0,0,0
+20-29,All King County,207537.14,168186,357164,0,0,0
+30-39,All King County,394262.07,167547,323444,14067,378,10
+40-49,All King County,296609.58,111720,203708,10837,508,18
+50-59,All King County,270375.02,104549,190903,9219,702,78
+60-69,All King County,219475.51,80650,145748,6043,953,161
+70-79,All King County,122090.34,44659,81691,2978,839,275
+80+,All King County,61987.13,24714,56460,2546,926,638
+Unknown,All King County,0,2205,2383,0,0,0
+0-9,Algona,484,48,59,0,0,0
+10-19,Algona,460,100,136,0,0,0
+20-29,Algona,518,182,282,0,0,0
+30-39,Algona,480,218,333,0,0,0
+40-49,Algona,390,158,244,0,0,0
+50-59,Algona,442,152,222,0,0,0
+60-69,Algona,252,116,183,0,0,0
+70-79,Algona,121,47,83,0,0,0
+80+,Algona,44,17,30,0,0,0
+Unknown,Algona,0,6,6,0,0,0
+0-9,Auburn,12296,1539,1893,0,0,0
+10-19,Auburn,10206,2274,3049,0,0,0
+20-29,Auburn,10808,4630,7587,0,0,0
+30-39,Auburn,12008,4745,7754,0,0,0
+40-49,Auburn,9801,3529,5651,0,0,0
+50-59,Auburn,11229,3385,5742,596,61,7
+60-69,Auburn,7037,2597,4368,394,83,14
+70-79,Auburn,3852,1371,2355,192,50,19
+80+,Auburn,1873,763,1584,145,43,32
+Unknown,Auburn,0,72,75,0,0,0
+0-9,Beaux Arts Village,43,5,8,0,0,0
+10-19,Beaux Arts Village,100,33,48,0,0,0
+20-29,Beaux Arts Village,9,25,48,0,0,0
+30-39,Beaux Arts Village,10,10,18,0,0,0
+40-49,Beaux Arts Village,98,28,38,0,0,0
+50-59,Beaux Arts Village,49,34,64,0,0,0
+60-69,Beaux Arts Village,34,12,30,0,0,0
+70-79,Beaux Arts Village,32,11,18,0,0,0
+80+,Beaux Arts Village,19,4,6,0,0,0
+Unknown,Beaux Arts Village,0,0,0,0,0,0
+0-9,Bellevue,15954,1797,2265,0,0,0
+10-19,Bellevue,15428,3623,5558,0,0,0
+20-29,Bellevue,19973,8492,14598,0,0,0
+30-39,Bellevue,23323,7522,11706,0,0,0
+40-49,Bellevue,20582,5599,8850,0,0,0
+50-59,Bellevue,19769,6026,9559,0,0,0
+60-69,Bellevue,13120,4534,7245,259,42,7
+70-79,Bellevue,8247,2660,4323,110,22,5
+80+,Bellevue,5846,1852,3532,145,73,34
+Unknown,Bellevue,0,119,129,0,0,0
+0-9,Black Diamond,663,80,110,0,0,0
+10-19,Black Diamond,421,136,183,0,0,0
+20-29,Black Diamond,420,244,350,0,0,0
+30-39,Black Diamond,605,276,404,0,0,0
+40-49,Black Diamond,526,196,321,0,0,0
+50-59,Black Diamond,824,255,390,0,0,0
+60-69,Black Diamond,511,201,300,0,0,0
+70-79,Black Diamond,381,95,165,0,0,0
+80+,Black Diamond,83,35,60,0,0,0
+Unknown,Black Diamond,0,2,2,0,0,0
+0-9,Bothell,6077,388,507,0,0,0
+10-19,Bothell,5166,583,857,0,0,0
+20-29,Bothell,5948,1591,2743,0,0,0
+30-39,Bothell,6973,1634,2551,0,0,0
+40-49,Bothell,6828,1173,1793,0,0,0
+50-59,Bothell,5777,1132,1836,0,0,0
+60-69,Bothell,4466,905,1541,0,0,0
+70-79,Bothell,2061,589,1035,0,0,0
+80+,Bothell,1698,505,1024,25,13,7
+Unknown,Bothell,0,14,23,0,0,0
+0-9,Boulevard Park,405,71,97,0,0,0
+10-19,Boulevard Park,235,104,148,0,0,0
+20-29,Boulevard Park,584,320,577,0,0,0
+30-39,Boulevard Park,737,303,521,0,0,0
+40-49,Boulevard Park,620,227,391,0,0,0
+50-59,Boulevard Park,293,166,337,0,0,0
+60-69,Boulevard Park,442,138,237,0,0,0
+70-79,Boulevard Park,283,79,160,0,0,0
+80+,Boulevard Park,124,26,62,0,0,0
+Unknown,Boulevard Park,0,5,7,0,0,0
+0-9,Bryn Mawr-Skyway,2240,291,403,0,0,0
+10-19,Bryn Mawr-Skyway,2467,412,576,0,0,0
+20-29,Bryn Mawr-Skyway,2100,968,1890,0,0,0
+30-39,Bryn Mawr-Skyway,2731,1260,2478,0,0,0
+40-49,Bryn Mawr-Skyway,2677,815,1502,0,0,0
+50-59,Bryn Mawr-Skyway,2732,775,1378,0,0,0
+60-69,Bryn Mawr-Skyway,1799,619,1123,0,0,0
+70-79,Bryn Mawr-Skyway,821,315,556,0,0,0
+80+,Bryn Mawr-Skyway,780,177,377,0,0,0
+Unknown,Bryn Mawr-Skyway,0,50,57,0,0,0
+0-9,Burien,7057,954,1286,0,0,0
+10-19,Burien,5964,1415,2108,0,0,0
+20-29,Burien,6381,2953,5345,0,0,0
+30-39,Burien,7624,3741,6909,0,0,0
+40-49,Burien,7604,2821,5158,0,0,0
+50-59,Burien,6676,2596,4695,0,0,0
+60-69,Burien,5387,2008,3590,199,49,9
+70-79,Burien,3059,1053,1880,89,28,8
+80+,Burien,1574,513,1085,50,18,10
+Unknown,Burien,0,58,69,0,0,0
+0-9,Carnation,163,27,36,0,0,0
+10-19,Carnation,296,46,65,0,0,0
+20-29,Carnation,158,64,101,0,0,0
+30-39,Carnation,265,105,179,0,0,0
+40-49,Carnation,217,78,113,0,0,0
+50-59,Carnation,326,68,103,0,0,0
+60-69,Carnation,238,53,97,0,0,0
+70-79,Carnation,60,21,28,0,0,0
+80+,Carnation,44,8,13,0,0,0
+Unknown,Carnation,0,3,3,0,0,0
+0-9,Clyde Hill,273,51,68,0,0,0
+10-19,Clyde Hill,714,177,314,0,0,0
+20-29,Clyde Hill,167,172,360,0,0,0
+30-39,Clyde Hill,203,71,116,0,0,0
+40-49,Clyde Hill,609,146,253,0,0,0
+50-59,Clyde Hill,502,238,440,0,0,0
+60-69,Clyde Hill,376,102,184,0,0,0
+70-79,Clyde Hill,272,73,107,0,0,0
+80+,Clyde Hill,179,45,64,0,0,0
+Unknown,Clyde Hill,0,1,1,0,0,0
+0-9,Cottage Lake,3097,279,341,0,0,0
+10-19,Cottage Lake,3787,638,951,0,0,0
+20-29,Cottage Lake,1625,817,1343,0,0,0
+30-39,Cottage Lake,1976,795,1170,0,0,0
+40-49,Cottage Lake,3873,876,1274,0,0,0
+50-59,Cottage Lake,4447,1084,1736,0,0,0
+60-69,Cottage Lake,3479,952,1428,0,0,0
+70-79,Cottage Lake,1290,471,739,0,0,0
+80+,Cottage Lake,381,170,281,0,0,0
+Unknown,Cottage Lake,0,13,13,0,0,0
+0-9,Covington,2681,324,409,0,0,0
+10-19,Covington,2612,509,695,0,0,0
+20-29,Covington,2689,1119,1819,0,0,0
+30-39,Covington,3080,1115,1768,0,0,0
+40-49,Covington,3006,855,1343,0,0,0
+50-59,Covington,3222,925,1449,0,0,0
+60-69,Covington,1839,623,914,0,0,0
+70-79,Covington,782,324,504,0,0,0
+80+,Covington,536,146,260,0,0,0
+Unknown,Covington,0,14,14,0,0,0
+0-9,Des Moines,3947,535,735,0,0,0
+10-19,Des Moines,3285,853,1293,0,0,0
+20-29,Des Moines,4314,1906,3491,0,0,0
+30-39,Des Moines,4375,2120,3942,0,0,0
+40-49,Des Moines,4714,1620,3096,0,0,0
+50-59,Des Moines,3678,1653,3127,0,0,0
+60-69,Des Moines,3320,1291,2674,139,15,5
+70-79,Des Moines,2226,783,1725,0,0,0
+80+,Des Moines,1659,541,1501,0,0,0
+Unknown,Des Moines,0,43,47,0,0,0
+0-9,Duvall,1313,109,129,0,0,0
+10-19,Duvall,1333,239,297,0,0,0
+20-29,Duvall,536,277,429,0,0,0
+30-39,Duvall,1195,381,533,0,0,0
+40-49,Duvall,1765,359,484,0,0,0
+50-59,Duvall,968,370,586,0,0,0
+60-69,Duvall,520,250,427,0,0,0
+70-79,Duvall,141,115,179,0,0,0
+80+,Duvall,40,34,61,0,0,0
+Unknown,Duvall,0,5,5,0,0,0
+0-9,East Renton Highlands,1515,188,235,0,0,0
+10-19,East Renton Highlands,1296,356,524,0,0,0
+20-29,East Renton Highlands,1107,449,838,0,0,0
+30-39,East Renton Highlands,1290,589,909,0,0,0
+40-49,East Renton Highlands,1759,554,868,0,0,0
+50-59,East Renton Highlands,2218,520,806,0,0,0
+60-69,East Renton Highlands,1269,434,686,0,0,0
+70-79,East Renton Highlands,904,269,436,0,0,0
+80+,East Renton Highlands,387,132,224,0,0,0
+Unknown,East Renton Highlands,0,22,24,0,0,0
+0-9,Enumclaw,1352,190,255,0,0,0
+10-19,Enumclaw,1626,365,501,0,0,0
+20-29,Enumclaw,1236,678,1033,0,0,0
+30-39,Enumclaw,1515,685,1076,0,0,0
+40-49,Enumclaw,1742,574,901,0,0,0
+50-59,Enumclaw,1857,732,1093,0,0,0
+60-69,Enumclaw,1216,601,989,0,0,0
+70-79,Enumclaw,667,346,537,29,11,7
+80+,Enumclaw,557,219,422,52,17,20
+Unknown,Enumclaw,0,6,6,0,0,0
+0-9,Fairwood,2660,236,306,0,0,0
+10-19,Fairwood,2288,401,561,0,0,0
+20-29,Fairwood,2249,852,1425,0,0,0
+30-39,Fairwood,2973,952,1490,0,0,0
+40-49,Fairwood,2630,710,1119,0,0,0
+50-59,Fairwood,2777,734,1155,0,0,0
+60-69,Fairwood,2139,600,917,0,0,0
+70-79,Fairwood,1321,331,573,0,0,0
+80+,Fairwood,391,158,296,0,0,0
+Unknown,Fairwood,0,46,46,0,0,0
+0-9,Fall City,323,33,54,0,0,0
+10-19,Fall City,291,56,80,0,0,0
+20-29,Fall City,195,83,131,0,0,0
+30-39,Fall City,281,98,156,0,0,0
+40-49,Fall City,262,85,142,0,0,0
+50-59,Fall City,417,98,159,0,0,0
+60-69,Fall City,327,85,113,0,0,0
+70-79,Fall City,104,35,59,0,0,0
+80+,Fall City,113,14,25,0,0,0
+Unknown,Fall City,0,0,0,0,0,0
+0-9,Federal Way,12888,1752,2197,0,0,0
+10-19,Federal Way,12811,2698,3722,0,0,0
+20-29,Federal Way,13684,6449,10703,0,0,0
+30-39,Federal Way,13579,5845,9717,0,0,0
+40-49,Federal Way,12167,4573,7818,0,0,0
+50-59,Federal Way,12886,4593,7802,705,69,9
+60-69,Federal Way,9976,3807,6614,476,76,13
+70-79,Federal Way,5476,2102,3708,213,71,20
+80+,Federal Way,2643,968,1680,122,37,30
+Unknown,Federal Way,0,88,94,0,0,0
+0-9,Hobart,770,82,92,0,0,0
+10-19,Hobart,1018,149,199,0,0,0
+20-29,Hobart,700,211,351,0,0,0
+30-39,Hobart,857,250,349,0,0,0
+40-49,Hobart,948,250,341,0,0,0
+50-59,Hobart,1350,321,480,0,0,0
+60-69,Hobart,908,294,446,0,0,0
+70-79,Hobart,401,146,204,0,0,0
+80+,Hobart,230,63,109,0,0,0
+Unknown,Hobart,0,8,8,0,0,0
+0-9,Hunts Point,41,9,14,0,0,0
+10-19,Hunts Point,67,31,54,0,0,0
+20-29,Hunts Point,17,32,64,0,0,0
+30-39,Hunts Point,23,27,67,0,0,0
+40-49,Hunts Point,60,18,44,0,0,0
+50-59,Hunts Point,78,37,61,0,0,0
+60-69,Hunts Point,67,25,56,0,0,0
+70-79,Hunts Point,53,19,40,0,0,0
+80+,Hunts Point,26,14,23,0,0,0
+Unknown,Hunts Point,0,0,0,0,0,0
+0-9,Issaquah,5333,614,782,0,0,0
+10-19,Issaquah,4019,1028,1571,0,0,0
+20-29,Issaquah,3948,1777,3305,0,0,0
+30-39,Issaquah,6786,2301,4344,0,0,0
+40-49,Issaquah,6131,1878,3726,0,0,0
+50-59,Issaquah,4344,1653,3170,0,0,0
+60-69,Issaquah,3251,1170,2355,0,0,0
+70-79,Issaquah,1528,833,2068,76,14,13
+80+,Issaquah,1598,831,2836,123,44,33
+Unknown,Issaquah,0,43,43,0,0,0
+0-9,Kenmore,3047,325,465,0,0,0
+10-19,Kenmore,2397,527,784,0,0,0
+20-29,Kenmore,2591,1112,1930,0,0,0
+30-39,Kenmore,3727,1450,2392,0,0,0
+40-49,Kenmore,3101,1041,1710,0,0,0
+50-59,Kenmore,3191,1061,1700,0,0,0
+60-69,Kenmore,2463,872,1454,0,0,0
+70-79,Kenmore,1244,511,855,0,0,0
+80+,Kenmore,785,268,501,22,15,6
+Unknown,Kenmore,0,12,12,0,0,0
+0-9,Kent,18102,2294,2810,0,0,0
+10-19,Kent,16604,3319,4559,0,0,0
+20-29,Kent,20819,8247,13678,0,0,0
+30-39,Kent,19674,8331,13520,0,0,0
+40-49,Kent,15671,5902,9638,0,0,0
+50-59,Kent,16584,5559,9524,825,73,6
+60-69,Kent,11879,4299,7283,538,89,17
+70-79,Kent,5392,2194,3842,257,79,21
+80+,Kent,3332,1161,2381,160,59,39
+Unknown,Kent,0,187,192,0,0,0
+0-9,Kirkland,10647,1285,1664,0,0,0
+10-19,Kirkland,8898,1917,2857,0,0,0
+20-29,Kirkland,11554,4716,8060,0,0,0
+30-39,Kirkland,15933,5572,8942,0,0,0
+40-49,Kirkland,12341,3866,6120,0,0,0
+50-59,Kirkland,11637,3797,6096,0,0,0
+60-69,Kirkland,9877,3150,5095,186,31,8
+70-79,Kirkland,4968,1693,2801,87,36,15
+80+,Kirkland,2224,921,1714,105,53,36
+Unknown,Kirkland,0,91,97,0,0,0
+0-9,Lake Forest Park,1689,207,279,0,0,0
+10-19,Lake Forest Park,1221,378,623,0,0,0
+20-29,Lake Forest Park,1192,580,1208,0,0,0
+30-39,Lake Forest Park,1846,733,1303,0,0,0
+40-49,Lake Forest Park,1492,624,1113,0,0,0
+50-59,Lake Forest Park,2203,704,1205,0,0,0
+60-69,Lake Forest Park,2238,671,1193,0,0,0
+70-79,Lake Forest Park,958,384,649,0,0,0
+80+,Lake Forest Park,539,187,328,0,0,0
+Unknown,Lake Forest Park,0,12,12,0,0,0
+0-9,Lake Holm,145,33,38,0,0,0
+10-19,Lake Holm,403,53,65,0,0,0
+20-29,Lake Holm,384,99,140,0,0,0
+30-39,Lake Holm,322,100,150,0,0,0
+40-49,Lake Holm,447,83,117,0,0,0
+50-59,Lake Holm,530,128,174,0,0,0
+60-69,Lake Holm,698,130,176,0,0,0
+70-79,Lake Holm,302,58,93,0,0,0
+80+,Lake Holm,23,22,34,0,0,0
+Unknown,Lake Holm,0,3,3,0,0,0
+0-9,Lake Morton-Berrydale,1441,121,142,0,0,0
+10-19,Lake Morton-Berrydale,1445,202,248,0,0,0
+20-29,Lake Morton-Berrydale,1124,352,523,0,0,0
+30-39,Lake Morton-Berrydale,1374,396,608,0,0,0
+40-49,Lake Morton-Berrydale,1355,306,479,0,0,0
+50-59,Lake Morton-Berrydale,2150,402,580,0,0,0
+60-69,Lake Morton-Berrydale,1385,325,462,0,0,0
+70-79,Lake Morton-Berrydale,833,187,314,0,0,0
+80+,Lake Morton-Berrydale,188,69,126,0,0,0
+Unknown,Lake Morton-Berrydale,0,4,4,0,0,0
+0-9,Lakeland North,1838,206,275,0,0,0
+10-19,Lakeland North,1493,337,457,0,0,0
+20-29,Lakeland North,1528,708,1109,0,0,0
+30-39,Lakeland North,1931,699,1124,0,0,0
+40-49,Lakeland North,1648,520,796,0,0,0
+50-59,Lakeland North,1861,592,938,0,0,0
+60-69,Lakeland North,1525,432,664,0,0,0
+70-79,Lakeland North,730,205,284,0,0,0
+80+,Lakeland North,266,76,122,0,0,0
+Unknown,Lakeland North,0,4,4,0,0,0
+0-9,Lakeland South,2037,168,203,0,0,0
+10-19,Lakeland South,1672,282,356,0,0,0
+20-29,Lakeland South,1539,619,982,0,0,0
+30-39,Lakeland South,1993,621,1049,0,0,0
+40-49,Lakeland South,1642,504,794,0,0,0
+50-59,Lakeland South,2054,561,859,0,0,0
+60-69,Lakeland South,1772,383,532,0,0,0
+70-79,Lakeland South,885,201,329,0,0,0
+80+,Lakeland South,255,100,172,0,0,0
+Unknown,Lakeland South,0,10,10,0,0,0
+0-9,Maple Heights-Lake Desire,359,62,79,0,0,0
+10-19,Maple Heights-Lake Desire,576,81,116,0,0,0
+20-29,Maple Heights-Lake Desire,131,113,177,0,0,0
+30-39,Maple Heights-Lake Desire,323,131,209,0,0,0
+40-49,Maple Heights-Lake Desire,484,132,194,0,0,0
+50-59,Maple Heights-Lake Desire,914,146,213,0,0,0
+60-69,Maple Heights-Lake Desire,469,134,195,0,0,0
+70-79,Maple Heights-Lake Desire,321,60,85,0,0,0
+80+,Maple Heights-Lake Desire,105,16,29,0,0,0
+Unknown,Maple Heights-Lake Desire,0,4,4,0,0,0
+0-9,Maple Valley,5044,577,708,0,0,0
+10-19,Maple Valley,3948,902,1197,0,0,0
+20-29,Maple Valley,1897,922,1479,0,0,0
+30-39,Maple Valley,4364,1439,2277,0,0,0
+40-49,Maple Valley,4150,1409,2116,0,0,0
+50-59,Maple Valley,3008,1092,1680,0,0,0
+60-69,Maple Valley,2311,653,971,0,0,0
+70-79,Maple Valley,805,310,533,0,0,0
+80+,Maple Valley,426,172,309,0,0,0
+Unknown,Maple Valley,0,16,16,0,0,0
+0-9,Medina,304,33,44,0,0,0
+10-19,Medina,628,177,340,0,0,0
+20-29,Medina,118,197,459,0,0,0
+30-39,Medina,218,95,144,0,0,0
+40-49,Medina,608,141,227,0,0,0
+50-59,Medina,548,228,416,0,0,0
+60-69,Medina,355,149,271,0,0,0
+70-79,Medina,263,86,122,0,0,0
+80+,Medina,218,51,81,0,0,0
+Unknown,Medina,0,5,7,0,0,0
+0-9,Mercer Island,2652,583,870,0,0,0
+10-19,Mercer Island,3825,1357,2548,0,0,0
+20-29,Mercer Island,1973,1484,3082,0,0,0
+30-39,Mercer Island,2338,1081,1968,0,0,0
+40-49,Mercer Island,3809,1406,2622,0,0,0
+50-59,Mercer Island,4112,1609,2964,0,0,0
+60-69,Mercer Island,3120,1246,2237,0,0,0
+70-79,Mercer Island,2000,787,1347,0,0,0
+80+,Mercer Island,1663,524,1047,30,12,6
+Unknown,Mercer Island,0,19,19,0,0,0
+0-9,Milton,939,10,10,0,0,0
+10-19,Milton,680,19,21,0,0,0
+20-29,Milton,1155,34,58,0,0,0
+30-39,Milton,1084,40,73,0,0,0
+40-49,Milton,987,28,32,0,0,0
+50-59,Milton,1131,35,63,0,0,0
+60-69,Milton,727,46,71,0,0,0
+70-79,Milton,485,53,95,0,0,0
+80+,Milton,355,76,129,0,0,0
+Unknown,Milton,0,0,0,0,0,0
+0-9,Mirrormont,438,36,41,0,0,0
+10-19,Mirrormont,434,74,95,0,0,0
+20-29,Mirrormont,305,107,196,0,0,0
+30-39,Mirrormont,291,124,189,0,0,0
+40-49,Mirrormont,544,141,218,0,0,0
+50-59,Mirrormont,732,119,186,0,0,0
+60-69,Mirrormont,637,114,156,0,0,0
+70-79,Mirrormont,234,60,87,0,0,0
+80+,Mirrormont,102,28,46,0,0,0
+Unknown,Mirrormont,0,5,5,0,0,0
+0-9,Newcastle,1390,194,259,0,0,0
+10-19,Newcastle,1245,325,527,0,0,0
+20-29,Newcastle,1460,669,1259,0,0,0
+30-39,Newcastle,1986,695,1258,0,0,0
+40-49,Newcastle,1953,531,826,0,0,0
+50-59,Newcastle,1661,581,945,0,0,0
+60-69,Newcastle,950,417,638,0,0,0
+70-79,Newcastle,544,214,341,0,0,0
+80+,Newcastle,370,105,178,0,0,0
+Unknown,Newcastle,0,19,19,0,0,0
+0-9,Normandy Park,700,158,232,0,0,0
+10-19,Normandy Park,621,194,341,0,0,0
+20-29,Normandy Park,517,299,529,0,0,0
+30-39,Normandy Park,536,393,809,0,0,0
+40-49,Normandy Park,768,367,676,0,0,0
+50-59,Normandy Park,1226,365,601,0,0,0
+60-69,Normandy Park,1098,366,664,0,0,0
+70-79,Normandy Park,603,216,395,0,0,0
+80+,Normandy Park,609,151,306,0,0,0
+Unknown,Normandy Park,0,9,9,0,0,0
+0-9,North Bend,965,172,211,0,0,0
+10-19,North Bend,847,269,419,0,0,0
+20-29,North Bend,486,397,704,0,0,0
+30-39,North Bend,1185,504,860,0,0,0
+40-49,North Bend,1067,467,757,0,0,0
+50-59,North Bend,965,459,784,0,0,0
+60-69,North Bend,766,327,563,0,0,0
+70-79,North Bend,293,171,321,0,0,0
+80+,North Bend,256,89,227,27,6,8
+Unknown,North Bend,0,4,6,0,0,0
+0-9,Pacific,1139,138,174,0,0,0
+10-19,Pacific,989,172,224,0,0,0
+20-29,Pacific,1256,426,675,0,0,0
+30-39,Pacific,1044,376,584,0,0,0
+40-49,Pacific,660,283,445,0,0,0
+50-59,Pacific,1003,279,431,0,0,0
+60-69,Pacific,596,194,291,0,0,0
+70-79,Pacific,301,79,159,0,0,0
+80+,Pacific,189,31,51,0,0,0
+Unknown,Pacific,0,7,7,0,0,0
+0-9,Ravensdale,295,26,29,0,0,0
+10-19,Ravensdale,186,58,68,0,0,0
+20-29,Ravensdale,220,43,55,0,0,0
+30-39,Ravensdale,165,57,69,0,0,0
+40-49,Ravensdale,337,68,95,0,0,0
+50-59,Ravensdale,294,97,133,0,0,0
+60-69,Ravensdale,298,62,89,0,0,0
+70-79,Ravensdale,54,39,53,0,0,0
+80+,Ravensdale,24,16,24,0,0,0
+Unknown,Ravensdale,0,0,0,0,0,0
+0-9,Redmond,9425,848,1020,0,0,0
+10-19,Redmond,5963,1183,1729,0,0,0
+20-29,Redmond,8990,3602,5561,0,0,0
+30-39,Redmond,14580,3761,5444,0,0,0
+40-49,Redmond,9472,2484,3780,0,0,0
+50-59,Redmond,5386,2022,3140,0,0,0
+60-69,Redmond,5196,1580,2475,0,0,0
+70-79,Redmond,2456,963,1610,61,11,6
+80+,Redmond,1729,828,1574,117,51,49
+Unknown,Redmond,0,58,60,0,0,0
+0-9,Renton,13515,1565,1977,0,0,0
+10-19,Renton,10474,2383,3436,0,0,0
+20-29,Renton,16460,6887,12219,0,0,0
+30-39,Renton,17389,7002,11962,0,0,0
+40-49,Renton,14349,4856,7958,0,0,0
+50-59,Renton,12221,4653,7889,544,41,6
+60-69,Renton,9687,3463,5988,365,50,10
+70-79,Renton,4216,1801,3265,171,47,12
+80+,Renton,2743,1206,2584,134,47,20
+Unknown,Renton,0,251,253,0,0,0
+0-9,Riverbend,161,26,33,0,0,0
+10-19,Riverbend,383,44,61,0,0,0
+20-29,Riverbend,195,68,112,0,0,0
+30-39,Riverbend,204,91,122,0,0,0
+40-49,Riverbend,329,83,126,0,0,0
+50-59,Riverbend,571,96,134,0,0,0
+60-69,Riverbend,346,78,117,0,0,0
+70-79,Riverbend,59,24,44,0,0,0
+80+,Riverbend,54,9,24,0,0,0
+Unknown,Riverbend,0,0,0,0,0,0
+0-9,Sammamish,9578,782,941,0,0,0
+10-19,Sammamish,10852,2208,3607,0,0,0
+20-29,Sammamish,4286,2271,4027,0,0,0
+30-39,Sammamish,8900,2104,3099,0,0,0
+40-49,Sammamish,12880,3075,4546,0,0,0
+50-59,Sammamish,9336,3115,4858,0,0,0
+60-69,Sammamish,5376,2039,3102,0,0,0
+70-79,Sammamish,2036,818,1252,0,0,0
+80+,Sammamish,805,264,444,16,5,6
+Unknown,Sammamish,0,78,81,0,0,0
+0-9,SeaTac,4219,461,603,0,0,0
+10-19,SeaTac,2828,720,989,0,0,0
+20-29,SeaTac,4543,2125,4030,0,0,0
+30-39,SeaTac,4958,2475,4768,0,0,0
+40-49,SeaTac,4080,1695,3218,0,0,0
+50-59,SeaTac,3444,1422,2688,0,0,0
+60-69,SeaTac,3186,1162,2094,162,36,7
+70-79,SeaTac,992,532,904,0,0,0
+80+,SeaTac,675,199,400,31,19,8
+Unknown,SeaTac,0,24,51,0,0,0
+0-9,Seattle,66560,13075,20614,0,0,0
+10-19,Seattle,58632,20369,46776,0,0,0
+20-29,Seattle,145526,83578,203437,0,0,0
+30-39,Seattle,136317,78439,170729,0,0,0
+40-49,Seattle,97436,41661,85821,0,0,0
+50-59,Seattle,79368,35163,72834,1988,162,19
+60-69,Seattle,69051,26121,53186,1356,218,35
+70-79,Seattle,33383,15058,30238,771,223,76
+80+,Seattle,22550,7909,22427,721,230,164
+Unknown,Seattle,0,526,585,0,0,0
+0-9,Shadow Lake,248,30,34,0,0,0
+10-19,Shadow Lake,251,42,51,0,0,0
+20-29,Shadow Lake,232,78,127,0,0,0
+30-39,Shadow Lake,222,66,119,0,0,0
+40-49,Shadow Lake,184,72,96,0,0,0
+50-59,Shadow Lake,579,69,96,0,0,0
+60-69,Shadow Lake,322,87,128,0,0,0
+70-79,Shadow Lake,192,34,65,0,0,0
+80+,Shadow Lake,56,22,36,0,0,0
+Unknown,Shadow Lake,0,1,1,0,0,0
+0-9,Shoreline,6416,794,1107,0,0,0
+10-19,Shoreline,5242,1397,2185,0,0,0
+20-29,Shoreline,5979,3263,6336,0,0,0
+30-39,Shoreline,8863,3834,7379,0,0,0
+40-49,Shoreline,7173,2888,5471,0,0,0
+50-59,Shoreline,8420,2710,5524,0,0,0
+60-69,Shoreline,7433,2672,5276,203,29,8
+70-79,Shoreline,3643,1562,3055,133,50,22
+80+,Shoreline,2851,1009,1964,147,43,49
+Unknown,Shoreline,0,39,40,0,0,0
+0-9,Skykomish,0,4,4,0,0,0
+10-19,Skykomish,12,2,2,0,0,0
+20-29,Skykomish,0,8,8,0,0,0
+30-39,Skykomish,6,11,16,0,0,0
+40-49,Skykomish,0,4,10,0,0,0
+50-59,Skykomish,45,9,12,0,0,0
+60-69,Skykomish,21,10,11,0,0,0
+70-79,Skykomish,17,10,11,0,0,0
+80+,Skykomish,13,3,7,0,0,0
+Unknown,Skykomish,0,0,0,0,0,0
+0-9,Snoqualmie,2791,373,474,0,0,0
+10-19,Snoqualmie,1901,605,868,0,0,0
+20-29,Snoqualmie,835,454,692,0,0,0
+30-39,Snoqualmie,2407,783,1228,0,0,0
+40-49,Snoqualmie,2498,877,1324,0,0,0
+50-59,Snoqualmie,1431,633,1049,0,0,0
+60-69,Snoqualmie,980,277,456,0,0,0
+70-79,Snoqualmie,313,113,161,0,0,0
+80+,Snoqualmie,161,32,49,0,0,0
+Unknown,Snoqualmie,0,8,9,0,0,0
+0-9,Tukwila,2517,395,538,0,0,0
+10-19,Tukwila,2272,557,1398,0,0,0
+20-29,Tukwila,3803,1754,4515,0,0,0
+30-39,Tukwila,3357,1777,4260,0,0,0
+40-49,Tukwila,2618,1189,2319,0,0,0
+50-59,Tukwila,2279,1122,2476,0,0,0
+60-69,Tukwila,1984,804,1483,0,0,0
+70-79,Tukwila,839,348,666,0,0,0
+80+,Tukwila,529,128,246,0,0,0
+Unknown,Tukwila,0,22,23,0,0,0
+0-9,Union Hill-Novelty Hill,3263,166,196,0,0,0
+10-19,Union Hill-Novelty Hill,2863,382,547,0,0,0
+20-29,Union Hill-Novelty Hill,1231,538,808,0,0,0
+30-39,Union Hill-Novelty Hill,2689,459,673,0,0,0
+40-49,Union Hill-Novelty Hill,3598,648,928,0,0,0
+50-59,Union Hill-Novelty Hill,2763,647,951,0,0,0
+60-69,Union Hill-Novelty Hill,2655,606,919,0,0,0
+70-79,Union Hill-Novelty Hill,2103,528,759,0,0,0
+80+,Union Hill-Novelty Hill,869,185,297,0,0,0
+Unknown,Union Hill-Novelty Hill,0,3,3,0,0,0
+0-9,Vashon,775,111,130,0,0,0
+10-19,Vashon,1085,216,324,0,0,0
+20-29,Vashon,670,272,483,0,0,0
+30-39,Vashon,884,310,496,0,0,0
+40-49,Vashon,1302,365,559,0,0,0
+50-59,Vashon,1685,476,769,0,0,0
+60-69,Vashon,2195,527,755,0,0,0
+70-79,Vashon,864,320,511,0,0,0
+80+,Vashon,576,126,261,0,0,0
+Unknown,Vashon,0,7,7,0,0,0
+0-9,White Center,2463,354,474,0,0,0
+10-19,White Center,1659,384,570,0,0,0
+20-29,White Center,2325,946,1652,0,0,0
+30-39,White Center,2613,1149,2066,0,0,0
+40-49,White Center,2067,794,1402,0,0,0
+50-59,White Center,2147,602,1032,0,0,0
+60-69,White Center,1557,409,683,0,0,0
+70-79,White Center,606,204,337,0,0,0
+80+,White Center,415,88,145,17,8,5
+Unknown,White Center,0,15,15,0,0,0
+0-9,Wilderness Rim,157,18,25,0,0,0
+10-19,Wilderness Rim,57,41,57,0,0,0
+20-29,Wilderness Rim,88,54,83,0,0,0
+30-39,Wilderness Rim,360,87,118,0,0,0
+40-49,Wilderness Rim,283,52,96,0,0,0
+50-59,Wilderness Rim,152,63,85,0,0,0
+60-69,Wilderness Rim,247,35,57,0,0,0
+70-79,Wilderness Rim,62,16,23,0,0,0
+80+,Wilderness Rim,51,4,13,0,0,0
+Unknown,Wilderness Rim,0,1,2,0,0,0
+0-9,Woodinville,1318,152,182,0,0,0
+10-19,Woodinville,1386,305,419,0,0,0
+20-29,Woodinville,1716,539,899,0,0,0
+30-39,Woodinville,2063,704,1082,0,0,0
+40-49,Woodinville,1749,545,822,0,0,0
+50-59,Woodinville,1544,613,941,0,0,0
+60-69,Woodinville,1114,490,766,0,0,0
+70-79,Woodinville,463,230,342,0,0,0
+80+,Woodinville,673,136,234,0,0,0
+Unknown,Woodinville,0,4,5,0,0,0
+0-9,Yarrow Point,117,12,15,0,0,0
+10-19,Yarrow Point,172,75,121,0,0,0
+20-29,Yarrow Point,50,88,205,0,0,0
+30-39,Yarrow Point,65,27,48,0,0,0
+40-49,Yarrow Point,178,65,116,0,0,0
+50-59,Yarrow Point,277,103,205,0,0,0
+60-69,Yarrow Point,138,61,106,0,0,0
+70-79,Yarrow Point,102,30,45,0,0,0
+80+,Yarrow Point,69,18,26,0,0,0
+Unknown,Yarrow Point,0,1,1,0,0,0
