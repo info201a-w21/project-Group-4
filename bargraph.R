@@ -1,0 +1,1 @@
+# Bar graph of deaths by age group in King County
