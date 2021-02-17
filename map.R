@@ -1,8 +1,14 @@
 library(tidyverse)
+library(rgdal)
+library(maptools)
+library(broom)
+library(ggplot2)
+if (!require(gpclib)) install.packages("gpclib", type="source")
+gpclibPermit()
 
 emergency_food <- read.csv("https://data.seattle.gov/api/views/kkzf-ntnu/rows.csv?accessType=DOWNLOAD")
-zipcode_data <- read.csv("zip_code_city.csv")
-covid_data <- read.csv("overall-counts-rates-geography-feb-10.csv")
+zipcode_data <- read.csv(paste(getwd(),"/data/zip_code_city.csv", sep = ""))
+covid_data <- read.csv(paste(getwd(),"/data/overall-counts-rates-geography-feb-10.csv", sep = ""))
 
 zipcode_data <- zipcode_data %>%
   mutate(Zip = as.character(Zip)) 
@@ -24,21 +30,53 @@ covid_data_to_fs_by_city <- covid_data %>%
   # mutate(deaths_per_fs = Deaths / num_food_sources) %>%
   # mutate(positives_per_fs = Positives / num_food_sources)
 
-library(rgdal)
 my_spdf <- readOGR( 
-  dsn= "Municipal_Boundaries-shp/", 
-  layer="Municipal_Boundaries",
+  dsn= paste(getwd(),"/data/Municipal_Boundaries-shp/", sep = ""), 
+  layer= "Municipal_Boundaries",
   verbose=FALSE
-)
+) 
 
-par(mar=c(0,0,0,0))
-plot(my_spdf, col="black", bg="white", lwd=0.5, border=0.5)
+spdf_fortified <- tidy(my_spdf, region = "CITYNAME")
 
-library(broom)
-spdf_fortified <- tidy(my_spdf, region = "King County")
+spdf_fortified <- spdf_fortified %>% 
+  rename(Location_Name = id) %>%
+  left_join(covid_data_to_fs_by_city, by="Location_Name")
 
-library(ggplot2)
-ggplot() +
-  geom_polygon(data = spdf_fortified, aes( x = long, y = lat, group = group), fill="black", color="white") +
-  theme_void() 
+blank_theme <- theme_bw() +
+  theme(
+    axis.line = element_blank(),       
+    axis.text = element_blank(),       
+    axis.ticks = element_blank(),      
+    axis.title = element_blank(),       
+    plot.background = element_blank(),  
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(), 
+    panel.border = element_blank()      
+  )
+
+# print(positives_map) to view the map
+positives_map <- ggplot() +
+  geom_polygon(data = spdf_fortified, 
+               aes(x = long, y = lat, group = group, fill = Positives), color="white") +
+  scale_fill_gradient2(
+    low = "white",
+    mid = "yellow",
+    high = "red"
+  ) + 
+  labs(title = "King County Positive COVID Test Distribution") +   
+  blank_theme + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+# print(deaths_map) to view the map
+deaths_map <- ggplot() +
+  geom_polygon(data = spdf_fortified, 
+               aes(x = long, y = lat, group = group, fill = Deaths), color="white") +
+  scale_fill_gradient2(
+    low = "white",
+    mid = "yellow",
+    high = "red"
+  ) + 
+  labs(title = "King County COVID Deaths Distribution") +   
+  blank_theme + 
+  theme(plot.title = element_text(hjust = 0.5))
 
