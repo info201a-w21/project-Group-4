@@ -10,22 +10,27 @@ View(emergency)
 
 # Analyzing the break down for each communities that the emergency food resources serve
 emergency <- emergency %>%
+  filter(Operational.Status == "Open") %>%
   group_by(Who.They.Serve)%>%
   mutate(youth = Who.They.Serve == "Youth and Young Adults")
 
 emergency <- emergency %>%
+  filter(Operational.Status == "Open") %>%
   group_by(Who.They.Serve)%>%
   mutate(public = Who.They.Serve == "General Public")
 
 emergency <- emergency %>%
+  filter(Operational.Status == "Open") %>%
   group_by(Who.They.Serve)%>%
   mutate(older = Who.They.Serve == "Older Adults 60+ and Eligible Participants")
 
 emergency <- emergency %>%
+  filter(Operational.Status == "Open") %>%
   group_by(Who.They.Serve)%>%
   mutate(students = Who.They.Serve == "Seattle Public School Students")
 
 emergency <- emergency %>%
+  filter(Operational.Status == "Open") %>%
   group_by(Who.They.Serve)%>%
   mutate(other = Who.They.Serve == "Contact Agency for Any Eligibility Requirements")
 
@@ -57,4 +62,6 @@ data <- data.frame(
 # plot pie chart
 ggplot(data, aes(x="", y=value, fill=group))+
   geom_bar(width = 1, stat = "identity") + 
-  coord_polar("y", start=0) 
+  coord_polar("y", start=0) + 
+  ggtitle("Communities") +
+  xlab("Communities") + ylab("Number of Emergency Food Resources Open")
