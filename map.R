@@ -11,7 +11,7 @@ zipcode_data <- read.csv(paste(getwd(),"/data/zip_code_city.csv", sep = ""))
 covid_data <- read.csv(paste(getwd(),"/data/overall-counts-rates-geography-feb-10.csv", sep = ""))
 
 zipcode_data <- zipcode_data %>%
-  mutate(Zip = as.character(Zip)) 
+  mutate(Zip = as.character(Zip))
 
 emergency_food_by_city <- emergency_food %>%
   mutate(Zip = str_extract(Address, ".{5}$")) %>%
@@ -24,59 +24,59 @@ emergency_food_by_city <- emergency_food %>%
 
 covid_data_to_fs_by_city <- covid_data %>%
   select(Location_Name, Positives, Deaths) %>%
-  filter(Location_Name != "All King County")
+  filter(Location_Name != "All King County") 
 
-  # left_join(emergency_food_by_city, by = "Location_Name") %>%
-  # mutate(deaths_per_fs = Deaths / num_food_sources) %>%
-  # mutate(positives_per_fs = Positives / num_food_sources)
+  # %>%
+  # left_join(emergency_food_by_city, by = "Location_Name") 
+  # mutate(deaths_per_fs = round(Deaths / num_food_sources)) %>%
+  # mutate(positives_per_fs = round(Positives / num_food_sources))
 
-my_spdf <- readOGR( 
-  dsn= paste(getwd(),"/data/Municipal_Boundaries-shp/", sep = ""), 
+my_spdf <- readOGR(
+  dsn= paste(getwd(),"/data/Municipal_Boundaries-shp/", sep = ""),
   layer= "Municipal_Boundaries",
   verbose=FALSE
-) 
+)
 
 spdf_fortified <- tidy(my_spdf, region = "CITYNAME")
 
-spdf_fortified <- spdf_fortified %>% 
+spdf_fortified <- spdf_fortified %>%
   rename(Location_Name = id) %>%
   left_join(covid_data_to_fs_by_city, by="Location_Name")
 
 blank_theme <- theme_bw() +
   theme(
-    axis.line = element_blank(),       
-    axis.text = element_blank(),       
-    axis.ticks = element_blank(),      
-    axis.title = element_blank(),       
-    plot.background = element_blank(),  
-    panel.grid.major = element_blank(), 
-    panel.grid.minor = element_blank(), 
-    panel.border = element_blank()      
+    axis.line = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    axis.title = element_blank(),
+    plot.background = element_blank(),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_blank()
   )
 
 # print(positives_map) to view the map
 positives_map <- ggplot() +
-  geom_polygon(data = spdf_fortified, 
+  geom_polygon(data = spdf_fortified,
                aes(x = long, y = lat, group = group, fill = Positives), color="white") +
   scale_fill_gradient2(
     low = "white",
     mid = "yellow",
     high = "red"
-  ) + 
-  labs(title = "King County Positive COVID Test Distribution") +   
-  blank_theme + 
+  ) +
+  labs(title = "King County Positive COVID Test Distribution") +
+  blank_theme +
   theme(plot.title = element_text(hjust = 0.5))
 
 # print(deaths_map) to view the map
 deaths_map <- ggplot() +
-  geom_polygon(data = spdf_fortified, 
+  geom_polygon(data = spdf_fortified,
                aes(x = long, y = lat, group = group, fill = Deaths), color="white") +
   scale_fill_gradient2(
     low = "white",
     mid = "yellow",
     high = "red"
-  ) + 
-  labs(title = "King County COVID Deaths Distribution") +   
-  blank_theme + 
+  ) +
+  labs(title = "King County COVID Deaths Distribution") +
+  blank_theme +
   theme(plot.title = element_text(hjust = 0.5))
-
