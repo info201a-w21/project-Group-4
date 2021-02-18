@@ -18,6 +18,15 @@ Introduction:
 # specifically in King County. This will give us a better understanding of the
 # situation, which can help both our own communities as well as others moving forward.
 
+---
+Summary Information:
+
+summary_info <- list()
+summary_info$num_observations <- nrow(my_dataframe)
+summary_info$some_max_value <- my_dataframe %>%
+    filter(some_var == max(some_var, na.rm = T)) %>%
+    select(some_label)
+
 ```{r echo = F}
 positives_map
 ```
