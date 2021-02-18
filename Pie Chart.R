@@ -1,5 +1,5 @@
 install.packages("ggplot2") # once per machine
-library("ggplot2")          # in each relevant script.
+library("ggplot2")          # in each relevant script
 library(dplyr)
 library(tidyverse)
 
@@ -59,7 +59,6 @@ data <- data.frame(
   value=c(youth_num,older_num,students_num,public_num,other_num)
 )
 
-# plot pie chart
 ggplot(data, aes(x="", y=value, fill=group))+
   geom_bar(width = 1, stat = "identity") +
   coord_polar("y", start=0) +

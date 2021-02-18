@@ -9,6 +9,6 @@ columns <- age_data %>%
 
 ggplot(columns, aes (x = Age_Group, y = Population, fill = condition) +
 # geom_col(mapping = aes(x = Age_Group, y = Population, color = "Deaths"))
-  geom_bar(position = "stack", stat = "identity")
+  geom_bar(position = "stack", stat = "identity"))
                  
  

@@ -6,9 +6,11 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 source('map.R')
+#source('bargraph.R')
+#source('Pie Chart.R')
 ```
 ---
-Introduction:
+### Introduction:
 Food accessibility has become a major concern for people during the pandemic,
 even more so than ever before. Due to rising unemployment and public regulation
 policies, the stability people may have experienced previously with food has
@@ -19,9 +21,15 @@ specifically in King County. This will give us a better understanding of the
 situation, which can help both our own communities as well as others moving forward.
 
 ```{r echo = F}
-positives_map
+deaths_per_fs_map
 ```
 
-The municipality in King County with the highest concentration of COVID
-cases seems to be the city of Seattle. This is to be expected as Seattle's
-population is significantly larger than the surrounding municipalities.
+The municipality in King County with the highest concentration of COVID deaths 
+to number of food sources seems to be the city of `max_deaths_per_fs_city`. 
+(Elaborate more.....)
+
+```{r echo = F}
+library(knitr)
+kable(combined_data, caption = "King County Municipalties Emergency Food Sources 
+      & Covid Data")
+```
