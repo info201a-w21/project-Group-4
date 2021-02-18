@@ -1,6 +1,7 @@
 install.packages("ggplot2") # once per machine
 library("ggplot2")          # in each relevant script
 library(dplyr)
+library(tidyverse)
 
 restaurants <- read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/Restaurants_Operating_during_COVID19.csv")
 View(restaurants)
@@ -28,15 +29,25 @@ emergency <- emergency %>%
   group_by(Who.They.Serve)%>%
   mutate(other = Who.They.Serve == "Contact Agency for Any Eligibility Requirements")
 
-youth_num <- nrow(youth)
+youth_num <- emergency %>%
+  filter(youth) %>%
+  nrow()
 
-public_num <- nrow(public)
+public_num <- emergency %>%
+  filter(public) %>%
+  nrow()
 
-older_num <- nrow(older)
+older_num <- emergency %>%
+  filter(older) %>%
+  nrow()
 
-students_num <- nrow(students)
+students_num <- emergency %>%
+  filter(students) %>%
+  nrow()
   
-other_num <- nrow(other)
+other_num <- emergency %>%
+  filter(other) %>%
+  nrow()
 
 data <- data.frame(
   group= c("youth","older","students","public","other"),
