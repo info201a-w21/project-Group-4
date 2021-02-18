@@ -1,14 +1,21 @@
 # Bar graph of deaths by age group in King County
 
 library(tidyverse)
-age_data <- read.csv(paste(getwd(), "/data/nts-by-date-all-demographics-jan-19.csv", sep = ""))
+age_data <- read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/nts-by-date-all-demographics-jan-19.csv")
 
-columns <- age_data %>% 
-  select(Deaths, Age_Group) %>% 
-  gather(key = Deaths, value = Population, -Age_Group)
+age_data <- age_data %>%
+  group_by(Age_Group) %>%
+  mutate(Total = Population - Deaths)
 
-ggplot(columns, aes (x = Age_Group, y = Population, fill = condition) +
-# geom_col(mapping = aes(x = Age_Group, y = Population, color = "Deaths"))
-  geom_bar(position = "stack", stat = "identity"))
-                 
- 
+columns <- age_data %>%
+  select(Age_Group, Deaths, Total, Population) %>%
+  gather(key = Deaths, value = Population, -Age_Group, -Population)
+
+
+ggplot(columns) +
+  geom_col(mapping = aes(x = Age_Group, y = Population, fill = Deaths))
+  #geom_col(aes(fill = Deaths))
+
+#  geom_col(mapping = aes(x = Age_Group, y = Population, fill = "Deaths"))
+  #geom_bar(position = "stack", stat = "identity")
+# , aes (x = Age_Group, y = Population, fill = Population)
