@@ -56,17 +56,17 @@ other_percent <- (other_num / total_open) * 100
 
 data <- data.frame(
   Communities= c("Youth","Older","Students","Public","Other"),
-  value=c(youth_percent,older_percent,students_percent,public_percent,other_percent),
-  mutate(Group = factor(Group, levels = c("Neutral", "Negative", "Positive")),
-         cumulative = cumsum(value),
-         midpoint = cumulative - value / 2,
-         label = paste0(Group, " ", round(value / sum(value) * 100, 1), "%"))
-)
+  value=c(youth_percent,older_percent,students_percent,public_percent,other_percent)) %>%
+  arrange(desc(Communities)) %>%
+  mutate(lab.ypos = cumsum(value) - 0.5*value,
+         label = paste0(round(value)))
 
 # plot pie chart
-ggplot(data, aes(x="", y=value, fill=Communities))+
-  geom_bar(width = 1, position = "stack") + 
-  coord_polar(theta = "y") +
-  geom_text(aes(x = 1.3, y = midpoint, label = label)) +
+ggplot(data, aes(x = "", y=value, fill = Communities))+
+  geom_bar(width = 1, stat = "identity") + 
+  coord_polar("y", start=0) +
+  geom_text(aes(y = lab.ypos, label = label, x = 1.2)) +
   ggtitle("Breakdown of Communities Served (Operating Emergency Food Resources)") +
-  ylab("Percentage of Emergency Food Resources Open")
+  theme(plot.title = element_text(hjust = 0.5)) +
+  ylab("Percentage of Emergency Food Resources Open (%)") +
+  theme(legend.title = element_text(size = 12, face = "bold"))
