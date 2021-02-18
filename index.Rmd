@@ -7,7 +7,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 source('map.R')
 #source('bargraph.R')
-#source('piechart.R')
+#source('PieChart.R')
 ```
 ---
 ### Introduction:
