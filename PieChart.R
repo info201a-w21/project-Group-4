@@ -1,5 +1,4 @@
-install.packages("ggplot2") # once per machine
-library("ggplot2")          # in each relevant script
+library(ggplot2)       
 library(dplyr)
 library(tidyverse)
 
@@ -28,41 +27,41 @@ youth_num <- emergency %>%
   filter(Youth) %>%
   nrow() 
 
-youth_percent <- (youth_num / total_open) * 100
+youth_percent <- round((youth_num / total_open) * 100)
 
 public_num <- emergency %>%
   filter(Public) %>%
   nrow()
 
-public_percent <- (public_num / total_open) * 100
+public_percent <- round((public_num / total_open) * 100)
 
 older_num <- emergency %>%
   filter(Older) %>%
   nrow()
 
-older_percent <- (older_num / total_open) * 100
+older_percent <- round((older_num / total_open) * 100)
 
 students_num <- emergency %>%
   filter(Students) %>%
   nrow()
 
-students_percent <- (students_num / total_open) * 100
+students_percent <- round((students_num / total_open) * 100)
 
 other_num <- emergency %>%
   filter(Other) %>%
   nrow()
 
-other_percent <- (other_num / total_open) * 100
+other_percent <- round((other_num / total_open) * 100)
 
 data <- data.frame(
   Communities= c("Youth","Older","Students","Public","Other"),
   value=c(youth_percent,older_percent,students_percent,public_percent,other_percent)) %>%
   arrange(desc(Communities)) %>%
   mutate(lab.ypos = cumsum(value) - 0.5*value,
-         label = paste0(round(value)))
+         label = value)
 
 # plot pie chart
-ggplot(data, aes(x = "", y=value, fill = Communities))+
+piechart <- ggplot(data, aes(x = "", y=value, fill = Communities))+
   geom_bar(width = 1, stat = "identity") + 
   coord_polar("y", start=0) +
   geom_text(aes(y = lab.ypos, label = label, x = 1.2)) +
@@ -70,3 +69,5 @@ ggplot(data, aes(x = "", y=value, fill = Communities))+
   theme(plot.title = element_text(hjust = 0.5)) +
   ylab("Percentage of Emergency Food Resources Open (%)") +
   theme(legend.title = element_text(size = 12, face = "bold"))
+
+plot(piechart)
