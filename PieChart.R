@@ -1,12 +1,11 @@
-install.packages("ggplot2") # once per machine
-library("ggplot2")          # in each relevant script
+library(ggplot2)       
 library(dplyr)
 library(tidyverse)
 
 restaurants <- read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/Restaurants_Operating_during_COVID19.csv")
-View(restaurants)
+#View(restaurants)
 emergency <- read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/COVID_Emergency_Food_and_Meals_Seattle_and_King_County.csv")
-View(emergency)
+#View(emergency)
 
 # Analyzing the break down for each communities that the emergency food resources serve
 emergency <- emergency %>%
@@ -28,41 +27,41 @@ youth_num <- emergency %>%
   filter(Youth) %>%
   nrow() 
 
-youth_percent <- (youth_num / total_open) * 100
+youth_percent <- round((youth_num / total_open) * 100)
 
 public_num <- emergency %>%
   filter(Public) %>%
   nrow()
 
-public_percent <- (public_num / total_open) * 100
+public_percent <- round((public_num / total_open) * 100)
 
 older_num <- emergency %>%
   filter(Older) %>%
   nrow()
 
-older_percent <- (older_num / total_open) * 100
+older_percent <- round((older_num / total_open) * 100)
 
 students_num <- emergency %>%
   filter(Students) %>%
   nrow()
 
-students_percent <- (students_num / total_open) * 100
+students_percent <- round((students_num / total_open) * 100)
 
 other_num <- emergency %>%
   filter(Other) %>%
   nrow()
 
-other_percent <- (other_num / total_open) * 100
+other_percent <- round((other_num / total_open) * 100)
 
 data <- data.frame(
   Communities= c("Youth","Older","Students","Public","Other"),
   value=c(youth_percent,older_percent,students_percent,public_percent,other_percent)) %>%
   arrange(desc(Communities)) %>%
   mutate(lab.ypos = cumsum(value) - 0.5*value,
-         label = paste0(round(value)))
+         label = value)
 
 # plot pie chart
-ggplot(data, aes(x = "", y=value, fill = Communities))+
+piechart <- ggplot(data, aes(x = "", y=value, fill = Communities))+
   geom_bar(width = 1, stat = "identity") + 
   coord_polar("y", start=0) +
   geom_text(aes(y = lab.ypos, label = label, x = 1.2)) +
