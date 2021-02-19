@@ -47,7 +47,11 @@ sources.
 
 ```{r echo = F}
 bar_graph
+
 ```
+
+This bar graph depicts the percentage of COVID-19 related deaths by age groups of 10 years. The oldest age group (80+) had the highest percentage of deaths according to its population size, while there were 0 recorded deaths for people under 9 (in King County). This could be because children typically do not need to run errands, such as getting food, and are therefore less prone to the disease than older people. The graph shows the correlation between age and deaths, and that with the increase in age, the susceptibility to either contracting the virus or dying from it increases as well, despite variation in the size of each age group.
+Though 1.03% of the population dying may not seem like a lot of people upon initial glance, it is significantly higher than the percentage of deaths for the other age groups, and more than 4 times higher the second-oldest age group of 70-79.
 
 
 ```{r echo = F}
@@ -56,11 +60,11 @@ deaths_per_fs_map
 
 The municipality in King County with the highest concentration of COVID deaths
 to number of food sources seems to be the city of `r max_deaths_per_fs_city` and
-the lowest concentration seems to be in the city of `r min_deaths_per_fs_city`. 
-This table further shows relevant data for food supply and Covid deaths and 
-positive tests and attempts to make create a comparable metric to analyze across 
-most cities in King County. In doing this the goal is to find areas in King 
-County that may not have adequate support in supplying food to its community. 
+the lowest concentration seems to be in the city of `r min_deaths_per_fs_city`.
+This table further shows relevant data for food supply and Covid deaths and
+positive tests and attempts to make create a comparable metric to analyze across
+most cities in King County. In doing this the goal is to find areas in King
+County that may not have adequate support in supplying food to its community.
 
 ```{r echo = F}
 piechart
@@ -68,4 +72,4 @@ piechart
 
 The pie chart represents a breakdown of the different communities being served at various operating emergency food resources during the COVID-19 pandemic. As we can see, among the five major communities being served, about `r youth_percent`% serves the Youth community, `r public_percent`% serves the general public community, `r older_percent`% serves the elderly community, `r students_percent`% serves the students community, `r other_percent`% serves the other community.
 
-This visualization revealed that the elderly community is one of the most undeserved communities during the pandemic, which is alarming considering that this community is also one of the most vulnerable.
+This visualization revealed that the elderly community is one of the most underserved communities during the pandemic, which is alarming considering that this community is also one of the most vulnerable.
