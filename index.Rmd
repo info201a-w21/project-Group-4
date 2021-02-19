@@ -43,7 +43,8 @@ kable(combined_data,
 The table shows trends that are to be expected such as `r max_emergency_fs_city`
 having the most emergency food sources. This is one of the largest municipalities
 in King County which makes sense in why it would have the most emergency food
-sources. 
+sources. Cities further out from the city center have less food sources and much 
+less cases and deaths. 
 
 ```{r echo = F}
 bar_graph
@@ -60,7 +61,7 @@ deaths_per_fs_map
 
 The municipality in King County with the highest concentration of COVID deaths
 to number of food sources seems to be the city of `r max_deaths_per_fs_city` and
-the lowest concentration seems to be in the city of `r min_deaths_per_fs_city`.
+the lowest concentration seems to be in the city/cities of `r min_deaths_per_fs_city`.
 This table further shows relevant data for food supply and Covid deaths and
 positive tests and attempts to make create a comparable metric to analyze across
 most cities in King County. In doing this the goal is to find areas in King
