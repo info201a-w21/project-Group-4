@@ -25,4 +25,6 @@ ggplot(age_data) +
 # percentage of deaths by age group
 bar_graph <- ggplot(age_data) +
   geom_col(mapping = aes(x= Age_Group, y = Percentage_of_Deaths)) +
-  scale_y_continuous(labels = scales::percent)
+  scale_y_continuous(labels = scales::percent) +
+  ggtitle("Percentage of COVID-19 Deaths by Age Group in King County") +
+  labs(x = "Age Group", y = "Percentage of Deaths")
