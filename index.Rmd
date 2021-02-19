@@ -42,7 +42,10 @@ kable(combined_data,
 
 ```{r echo = F}
 bar_graph
+
 ```
+
+This bar graph depicts the percentage of COVID-19 related deaths by age groups of 10 years. The oldest age group (80+) had the highest percentage of deaths according to its population size, while there were 0 recorded deaths for people under 9 (in King County). This could be because children typically do not need to run errands, such as getting food, and are therefore less prone to the disease than older people. The graph shows the correlation between age and deaths, and that with the increase in age, the susceptibility to either contracting the virus or dying from it increases as well, despite variation in the size of each age group.
 
 
 ```{r echo = F}
