@@ -5,14 +5,25 @@ age_data <- read.csv(paste(getwd(), "/data/nts-by-date-all-demographics-jan-19.c
 
 age_data <- age_data %>% 
   group_by(Age_Group) %>% 
-  mutate(Total = Population - Deaths)
+  mutate(
+    Total = Population - Deaths,
+    Percentage_of_Deaths = Deaths/Population
+    )
 
 columns <- age_data %>% 
   select(Age_Group, Deaths, Total, Population) %>% 
   gather(key = Deaths, value = Population, -Age_Group, -Population)
 
+# stacked bar graph
 ggplot(columns) +
   geom_col(mapping = aes(x = Age_Group, y = Population, fill = Deaths))
 
+# bar graph of deaths
 ggplot(age_data) +
   geom_col(mapping = aes(x = Age_Group, y = Deaths))
+
+# percentage of deaths by age group
+bar_graph <- ggplot(age_data) +
+  geom_col(mapping = aes(x= Age_Group, y = Percentage_of_Deaths)) +
+  scale_y_continuous(labels = scales::percent)
+
