@@ -7,16 +7,7 @@ if (!require(gpclib)) install.packages("gpclib", type="source")
 gpclibPermit()
 
 source("aggregate_table.R")
-
-max_deaths_per_fs_city <- combined_data %>% 
-  filter(deaths_per_fs == max(deaths_per_fs)) %>%
-  pull(Location_Name)
-
-min_deaths_per_fs_city <- combined_data %>% 
-  filter(deaths_per_fs == min(deaths_per_fs)) %>%
-  pull(Location_Name)
   
-
 my_spdf <- readOGR(
   dsn= paste(getwd(),"/data/Municipal_Boundaries-shp/", sep = ""),
   layer= "Municipal_Boundaries",

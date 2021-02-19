@@ -3,9 +3,9 @@ library(dplyr)
 library(tidyverse)
 
 restaurants <- read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/Restaurants_Operating_during_COVID19.csv")
-View(restaurants)
+#View(restaurants)
 emergency <- read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/COVID_Emergency_Food_and_Meals_Seattle_and_King_County.csv")
-View(emergency)
+#View(emergency)
 
 # Analyzing the break down for each communities that the emergency food resources serve
 emergency <- emergency %>%

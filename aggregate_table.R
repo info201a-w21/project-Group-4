@@ -1,5 +1,7 @@
 library(tidyverse)
 
+# Map/Table Data
+#-------------------------------------------------------------------------------
 emergency_food <- read.csv("https://data.seattle.gov/api/views/kkzf-ntnu/rows.csv?accessType=DOWNLOAD")
 zipcode_data <- read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/zip_code_city.csv")
 covid_data <- read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/overall-counts-rates-geography-feb-10.csv")
@@ -37,3 +39,13 @@ combined_data <- left_join(emergency_food_by_city,
   filter(num_food_sources != is.nan(num_food_sources)) %>%
   mutate(deaths_per_fs = round(Deaths / num_food_sources)) %>%
   mutate(positives_per_fs = round(Positives / num_food_sources))
+
+max_deaths_per_fs_city <- combined_data %>% 
+  filter(deaths_per_fs == max(deaths_per_fs)) %>%
+  pull(Location_Name)
+
+min_deaths_per_fs_city <- combined_data %>% 
+  filter(deaths_per_fs == min(deaths_per_fs)) %>%
+  pull(Location_Name)
+
+#-------------------------------------------------------------------------------

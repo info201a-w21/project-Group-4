@@ -3,7 +3,7 @@ title: "Food Accessibility and COVID-19 Cases in Washington"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, echo=FALSE, warning=FALSE, message=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 source('aggregate_table.R')
 source('map.R')
@@ -28,17 +28,22 @@ Summary Information:
 
 ```{r echo = F}
 library(knitr)
-kable(combined_data, 
+kable(combined_data,
       caption = "**King County Municipalities Emergency Food Sources
       & Covid Data**",
-      col.names = c("City", 
-                    "Number of Food Sources", 
-                    "Positives", 
-                    "Deaths", 
-                    "Deaths per Food Source", 
-                    "Positives per Food Source"),
-      align = "lccccc") 
+      col.names = c("City",
+                    "Number of Food Sources",
+                    "Positive Tests",
+                    "Deaths",
+                    "Deaths per Food Source",
+                    "Positive Tests per Food Source"),
+      align = "lccccc")
 ```
+
+The table shows trends that are to be expected such as `r max_emergency_fs_city`
+having the most emergency food sources. This is one of the largest municipalities
+in King County which makes sense in why it would have the most emergency food
+sources. 
 
 ```{r echo = F}
 bar_graph
@@ -50,9 +55,16 @@ deaths_per_fs_map
 ```
 
 The municipality in King County with the highest concentration of COVID deaths
-to number of food sources seems to be the city of `r max_deaths_per_fs_city`.
-(Elaborate more.....)
+to number of food sources seems to be the city of `r max_deaths_per_fs_city` and
+the lowest concentration seems to be in the city of `r min_deaths_per_fs_city`. 
+This table further shows relevant data for food supply and Covid deaths and 
+positive tests and attempts to make create a comparable metric to analyze across 
+most cities in King County. In doing this the goal is to find areas in King 
+County that may not have adequate support in supplying food to its community. 
 
+```{r echo = F}
+piechart
+```
 
 The pie chart represents a breakdown of the different communities being served at various operating emergency food resources during the COVID-19 pandemic. As we can see, among the five major communities being served, about `r youth_percent`% serves the Youth community, `r public_percent`% serves the general public community, `r older_percent`% serves the elderly community, `r students_percent`% serves the students community, `r other_percent`% serves the other community.
 
