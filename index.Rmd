@@ -33,12 +33,21 @@ summary_info$some_max_value <- my_dataframe %>%
 deaths_per_fs_map
 ```
 
-The municipality in King County with the highest concentration of COVID deaths 
-to number of food sources seems to be the city of `max_deaths_per_fs_city`. 
+The municipality in King County with the highest concentration of COVID deaths
+to number of food sources seems to be the city of `r max_deaths_per_fs_city`.
 (Elaborate more.....)
+
 
 ```{r echo = F}
 library(knitr)
-kable(combined_data, caption = "King County Municipalties Emergency Food Sources 
-      & Covid Data")
+kable(combined_data, 
+      caption = "King County Municipalities Emergency Food Sources
+      & Covid Data", 
+      col.names = c("City", 
+                    "Number of Food Sources", 
+                    "Positives", 
+                    "Deaths", 
+                    "Deaths per Food Source", 
+                    "Positives per Food Source"),
+      align = "lccccc") 
 ```
