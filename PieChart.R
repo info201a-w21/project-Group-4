@@ -69,5 +69,3 @@ piechart <- ggplot(data, aes(x = "", y=value, fill = Communities))+
   theme(plot.title = element_text(hjust = 0.5)) +
   ylab("Percentage of Emergency Food Resources Open (%)") +
   theme(legend.title = element_text(size = 12, face = "bold"))
-
-plot(piechart)
