@@ -7,7 +7,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 source('aggregate_table.R')
 source('map.R')
-#source('bargraph.R')
+source('bargraph.R')
 #source('PieChart.R')
 ```
 ---
@@ -38,6 +38,10 @@ kable(combined_data,
                     "Deaths per Food Source", 
                     "Positives per Food Source"),
       align = "lccccc") 
+```
+
+```{r echo = F}
+bar_graph
 ```
 
 
