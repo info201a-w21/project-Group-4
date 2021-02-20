@@ -9,6 +9,7 @@ source('aggregate_table.R')
 source('map.R')
 source('bargraph.R')
 source('PieChart.R')
+source('Summary_Info.R')
 ```
 ---
 ### Introduction:
@@ -23,8 +24,7 @@ situation, which can help both our own communities as well as others moving forw
 
 ---
 Summary Information:
-
-
+`r summary_info$num_cities`
 
 ```{r echo = F}
 library(knitr)
