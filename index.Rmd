@@ -9,7 +9,7 @@ source('aggregate_table.R')
 source('map.R')
 source('bargraph.R')
 source('PieChart.R')
-source('Summary_Info.R')
+source('Summary_List.R')
 ```
 ---
 
@@ -26,22 +26,23 @@ forward.
 
 ---
 ### Summary Information:
-Within our dataset, we found that there are `r summary_info$num_cities` distinct cities in King County that host a total of `r summary_info$total_fs` food sources. The cities with the 
-least amount of food resources are `r summary_info$some_min_value[1]`,
-`r summary_info$some_min_value[2]`, `r summary_info$some_min_value[3]`, and 
-`r summary_info$some_min_value[4]`. We wanted to see if having less food sources 
-would result in higher deaths in a given city, and we found that the cities with the 
-highest COVID deaths were `r summary_info$highest_death_cities[1]`, 
+Within our dataset, we found that there are `r summary_info$num_cities` distinct
+cities in King County that host a total of `r summary_info$total_fs` food sources.
+The cities with the least amount of food resources are `r summary_info$some_min_value[1]`,
+`r summary_info$some_min_value[2]`, `r summary_info$some_min_value[3]`, and
+`r summary_info$some_min_value[4]`. We wanted to see if having less food sources
+would result in higher deaths in a given city, and we found that the cities with the
+highest COVID deaths were `r summary_info$highest_death_cities[1]`,
 `r summary_info$highest_death_cities[2]`, and `r summary_info$highest_death_cities[3]`.
-The only city that may have indicated the relationship between staggering death counts and 
-limited food resources was Ravensdale. Our team then sought the city with the 
-highest ratio of COVID deaths to food sources, and found it was `r summary_info$highest_deaths`. 
+The only city that may have indicated the relationship between staggering death counts and
+limited food resources was Ravensdale. Our team then sought the city with the
+highest ratio of COVID deaths to food sources, and found it was `r summary_info$highest_deaths`.
 Our team was quite surprised, because Shoreline has a significant number of COVID deaths,
-but it is certainly not the highest. We were then curious if the ratio of death counts to 
+but it is certainly not the highest. We were then curious if the ratio of death counts to
 food resources  would align with the COVID case counts and food resources.
-We found that the city with the highest ratio of COVID cases to food resources was 
+We found that the city with the highest ratio of COVID cases to food resources was
 `r summary_info$highest_cases_fs`. While this doesn't show a relationship between
-death counts, case counts, AND number of food sources, we continue to wonder if 
+death counts, case counts, AND number of food sources, we continue to wonder if
 there are confounding factors. Our team will continue investigating this.
 
 
