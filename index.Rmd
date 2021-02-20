@@ -12,6 +12,7 @@ source('PieChart.R')
 source('Summary_Info.R')
 ```
 ---
+
 ### Introduction:
 Food accessibility has become a major concern for people during the pandemic,
 even more so than ever before. Due to rising unemployment and public regulation
@@ -23,8 +24,9 @@ specifically in King County. This will give us a better understanding of the
 situation, which can help both our own communities as well as others moving forward.
 
 ---
-Summary Information:
-`r summary_info$num_cities`
+### Summary Information:
+Within our dataset, there are `r summary_info$num_cities` distinct  
+
 
 ```{r echo = F}
 library(knitr)

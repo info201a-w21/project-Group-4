@@ -5,6 +5,8 @@ source("aggregate_table.R")
 
 summary_info <- list(combined_data)
 summary_info$num_cities <- nrow(combined_data)
+summary_info$total_fs <- sum(combined_data$num_food_sources)
+
 summary_info$some_min_value <- min_emergency_fs_city
 
 summary_info$highest_death_cities <- combined_data %>%
