@@ -25,8 +25,7 @@ situation, which can help both our own communities as well as others moving forw
 
 ---
 ### Summary Information:
-Within our dataset, there are `r summary_info$num_cities` distinct cities in King County
-that host a total of `r summary_info$total_fs` food sources. The cities with the 
+Within our dataset, we found that there are `r summary_info$num_cities` distinct cities in King County that host a total of `r summary_info$total_fs` food sources. The cities with the 
 least amount of food resources are `r summary_info$some_min_value[1]`,
 `r summary_info$some_min_value[2]`, `r summary_info$some_min_value[3]`, and 
 `r summary_info$some_min_value[4]`. We wanted to see if having less food sources 
