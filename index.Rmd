@@ -5,11 +5,11 @@ output: html_document
 
 ```{r setup, include=FALSE, echo=FALSE, warning=FALSE, message=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-source('aggregate_table.R')
-source('map.R')
-source('bargraph.R')
-source('PieChart.R')
-source('Summary_List.R')
+source("aggregate_table.R")
+source("map.R")
+source("bargraph.R")
+source("PieChart.R")
+source("Summary_List.R")
 ```
 ---
 

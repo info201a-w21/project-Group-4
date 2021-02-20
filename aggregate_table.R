@@ -2,9 +2,12 @@ library(tidyverse)
 
 # Map/Table Data
 #-------------------------------------------------------------------------------
-emergency_food <- read.csv("https://data.seattle.gov/api/views/kkzf-ntnu/rows.csv?accessType=DOWNLOAD")
-zipcode_data <- read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/zip_code_city.csv")
-covid_data <- read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/overall-counts-rates-geography-feb-10.csv")
+emergency_food <- 
+  read.csv("https://data.seattle.gov/api/views/kkzf-ntnu/rows.csv?accessType=DOWNLOAD")
+zipcode_data <- 
+  read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/zip_code_city.csv")
+covid_data <- 
+  read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/overall-counts-rates-geography-feb-10.csv")
 
 zipcode_data <- zipcode_data %>%
   mutate(Zip = str_trim(as.character(Zip)))

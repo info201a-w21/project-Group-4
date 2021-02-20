@@ -2,15 +2,15 @@ library(ggplot2)
 library(dplyr)
 library(tidyverse)
 
-restaurants <- read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/Restaurants_Operating_during_COVID19.csv")
-#View(restaurants)
-emergency <- read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/COVID_Emergency_Food_and_Meals_Seattle_and_King_County.csv")
-#View(emergency)
+restaurants <- 
+  read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/Restaurants_Operating_during_COVID19.csv")
+emergency <- 
+  read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/COVID_Emergency_Food_and_Meals_Seattle_and_King_County.csv")
 
 # Analyzing the break down for each communities that the emergency food resources serve
 emergency <- emergency %>%
   filter(Operational.Status == "Open") %>%
-  group_by(Who.They.Serve)%>%
+  group_by(Who.They.Serve) %>%
   mutate(Youth = Who.They.Serve == "Youth and Young Adults", 
          Public = Who.They.Serve == "General Public",
          Older = Who.They.Serve == "Older Adults 60+ and Eligible Participants",
@@ -54,16 +54,20 @@ other_num <- emergency %>%
 other_percent <- round((other_num / total_open) * 100)
 
 data <- data.frame(
-  Communities= c("Youth","Older","Students","Public","Other"),
-  value=c(youth_percent,older_percent,students_percent,public_percent,other_percent)) %>%
+  Communities = c("Youth", "Older", "Students", "Public", "Other"),
+  value = c(youth_percent, 
+            older_percent, 
+            students_percent, 
+            public_percent, 
+            other_percent)) %>%
   arrange(desc(Communities)) %>%
-  mutate(lab.ypos = cumsum(value) - 0.5*value,
+  mutate(lab.ypos = cumsum(value) - 0.5 * value,
          label = value)
 
 # plot pie chart
-piechart <- ggplot(data, aes(x = "", y=value, fill = Communities))+
+piechart <- ggplot(data, aes(x = "", y = value, fill = Communities)) +
   geom_bar(width = 1, stat = "identity") + 
-  coord_polar("y", start=0) +
+  coord_polar("y", start = 0) +
   geom_text(aes(y = lab.ypos, label = label, x = 1.2)) +
   ggtitle("Breakdown of Communities Served (Operating Emergency Food Resources)") +
   theme(plot.title = element_text(hjust = 0.5)) +
