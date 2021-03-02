@@ -1,5 +1,7 @@
 ---
 title: "Food Accessibility and COVID-19 Cases in Washington"
+author: "Bruce Chen, Christine Nguyen, Abbie Sawyer, Annie Tu"
+date: "2/19/2021"
 output: html_document
 ---
 
@@ -14,36 +16,16 @@ source("Summary_List.R")
 ---
 
 ### Introduction:
-Food accessibility has become a major concern for people during the pandemic,
-even more so than ever before. Due to rising unemployment and public regulation
-policies, the stability people may have experienced previously with food has
-undoubtedly changed. We wanted to investigate the relationship between COVID-19,
-the number of operating restaurants, and emergency food resources, to discover
-how much of an effect the pandemic has had on people’s ability to access food,
-specifically in King County. This will give us a better understanding of the
-situation, which can help both our own communities as well as others moving
-forward.
+Food accessibility has become a major concern for people during the pandemic, even more so than ever before. Due to rising unemployment and public regulation policies, the stability people may have experienced previously with food has undoubtedly changed. We wanted to investigate the relationship between COVID-19, the number of operating restaurants, and emergency food resources, to discover
+how much of an effect the pandemic has had on people’s ability to access food, specifically in King County. This will give us a better understanding of the situation, which can help both our own communities as well as others moving forward.  
+Our datasets come from data.gov, data.seattle.gov, and kingcounty.gov. They contain data on Emergency Food & Meals locations in Seattle and King County, restaurants still open during COVID-19, and COVID-19 data in King County.
 
 ---
 ### Summary Information:
-Within our dataset, we found that there are `r summary_info$num_cities` distinct
-cities in King County that host a total of `r summary_info$total_fs` food sources.
-The cities with the least amount of food resources are `r summary_info$some_min_value[1]`,
-`r summary_info$some_min_value[2]`, `r summary_info$some_min_value[3]`, and
-`r summary_info$some_min_value[4]`. We wanted to see if having less food sources
-would result in higher deaths in a given city, and we found that the cities with the
-highest COVID deaths were `r summary_info$highest_death_cities[1]`,
-`r summary_info$highest_death_cities[2]`, and `r summary_info$highest_death_cities[3]`.
-The only city that may have indicated the relationship between staggering death counts and
-limited food resources was Ravensdale. Our team then sought the city with the
-highest ratio of COVID deaths to food sources, and found it was `r summary_info$highest_deaths`.
-Our team was quite surprised, because Shoreline has a significant number of COVID deaths,
-but it is certainly not the highest. We were then curious if the ratio of death counts to
-food resources  would align with the COVID case counts and food resources.
-We found that the city with the highest ratio of COVID cases to food resources was
-`r summary_info$highest_cases_fs`. While this doesn't show a relationship between
-death counts, case counts, AND number of food sources, we continue to wonder if
-there are confounding factors. Our team will continue investigating this.
+Within our dataset, we found that there are `r summary_info$num_cities` distinct cities in King County that host a total of `r summary_info$total_fs` food sources. The cities with the least amount of food resources are `r summary_info$some_min_value[1]`, `r summary_info$some_min_value[2]`, `r summary_info$some_min_value[3]`, and `r summary_info$some_min_value[4]`. We wanted to see if having less food sources would result in higher deaths in a given city, and we found that the cities with the highest COVID deaths were `r summary_info$highest_death_cities[1]`, `r summary_info$highest_death_cities[2]`, and `r summary_info$highest_death_cities[3]`. The only city that may have indicated the relationship between staggering death counts and
+limited food resources was Ravensdale. Our team then sought the city with the highest ratio of COVID deaths to food sources, and found it was `r summary_info$highest_deaths`. Our team was quite surprised, because Shoreline has a significant number of COVID deaths,
+but it is certainly not the highest. We were then curious if the ratio of death counts to food resources  would align with the COVID case counts and food resources. We found that the city with the highest ratio of COVID cases to food resources was
+`r summary_info$highest_cases_fs`. While this doesn't show a relationship between death counts, case counts, AND number of food sources, we continue to wonder if there are confounding factors. Our team will continue investigating this.
 
 
 ```{r echo = F}
@@ -60,10 +42,7 @@ kable(combined_data,
       align = "lccccc")
 ```
 
-The table shows trends that are to be expected such as `r max_emergency_fs_city`
-having the most emergency food sources. This is one of the largest municipalities
-in King County which makes sense in why it would have the most emergency food
-sources. Cities further out from the city center have less food sources and much
+The table shows trends that are to be expected such as `r max_emergency_fs_city` having the most emergency food sources. This is one of the largest municipalities in King County which makes sense in why it would have the most emergency food sources. Cities further out from the city center have less food sources and much
 less cases and deaths.
 
 ```{r echo = F}
@@ -71,42 +50,20 @@ bar_graph
 
 ```
 
-This bar graph depicts the percentage of COVID-19 related deaths by age groups of
-10 years. The oldest age group (80+) had the highest percentage of deaths according
-to its population size, while there were 0 recorded deaths for people under 9
-(in King County). This could be because children typically do not need to run errands,
-such as getting food, and are therefore less prone to the disease than older people.
-The graph shows the correlation between age and deaths, and that with the increase
-in age, the susceptibility to either contracting the virus or dying from it increases
-as well, despite variation in the size of each age group. Though 1.03% of the
-population dying may not seem like a lot of people upon initial glance, it is
-significantly higher than the percentage of deaths for the other age groups, and
-more than 4 times higher the second-oldest age group of 70-79.
+This bar graph depicts the percentage of COVID-19 related deaths by age groups of 10 years. The oldest age group (80+) had the highest percentage of deaths according to its population size, while there were 0 recorded deaths for people under 9 (in King County). This could be because children typically do not need to run errands,
+such as getting food, and are therefore less prone to the disease than older people. The graph shows the correlation between age and deaths, and that with the increase in age, the susceptibility to either contracting the virus or dying from it increases as well, despite variation in the size of each age group. Though 1.03% of the
+population dying may not seem like a lot of people upon initial glance, it is significantly higher than the percentage of deaths for the other age groups, and more than 4 times higher the second-oldest age group of 70-79.
 
 
 ```{r echo = F}
 deaths_per_fs_map
 ```
 
-The municipality in King County with the highest concentration of COVID deaths
-to number of food sources seems to be the city of `r max_deaths_per_fs_city` and
-the lowest concentration seems to be in the city/cities of `r min_deaths_per_fs_city`.
-This table further shows relevant data for food supply and Covid deaths and
-positive tests and attempts to make create a comparable metric to analyze across
-most cities in King County. In doing this the goal is to find areas in King
-County that may not have adequate support in supplying food to its community.
+The municipality in King County with the highest concentration of COVID deaths to number of food sources seems to be the city of `r max_deaths_per_fs_city` and the lowest concentration seems to be in the city/cities of `r min_deaths_per_fs_city`. This table further shows relevant data for food supply and Covid deaths and positive tests and attempts to make create a comparable metric to analyze across most cities in King County. In doing this the goal is to find areas in King County that may not have adequate support in supplying food to its community.
 
 ```{r echo = F}
 piechart
 ```
 
-The pie chart represents a breakdown of the different communities being served at
-various operating emergency food resources during the COVID-19 pandemic. As we can
-see, among the five major communities being served, about `r youth_percent`% serves
-the Youth community, `r public_percent`% serves the general public community,
-`r older_percent`% serves the elderly community, `r students_percent`% serves the
-students community, `r other_percent`% serves the other community.
-
-This visualization revealed that the elderly community is one of the most under
-served communities during the pandemic, which is alarming considering that this
-community is also one of the most vulnerable.
+The pie chart represents a breakdown of the different communities being served at various operating emergency food resources during the COVID-19 pandemic. As we can see, among the five major communities being served, about `r youth_percent`% serves the Youth community, `r public_percent`% serves the general public community, `r older_percent`% serves the elderly community, `r students_percent`% serves the students community, `r other_percent`% serves the other community.  
+This visualization revealed that the elderly community is one of the most under served communities during the pandemic, which is alarming considering that this community is also one of the most vulnerable.
