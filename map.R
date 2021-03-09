@@ -3,10 +3,11 @@ library(rgdal)
 library(maptools)
 library(broom)
 library(ggplot2)
-if (!require(gpclib)) install.packages("gpclib", type="source")
+if (!require(gpclib)) install.packages("gpclib", type = "source")
 gpclibPermit()
 
 source("aggregate_table.R")
+<<<<<<< HEAD
 
 max_deaths_per_fs_city <- combined_data %>% 
   filter(deaths_per_fs == max(deaths_per_fs)) %>%
@@ -15,6 +16,14 @@ max_deaths_per_fs_city <- combined_data %>%
 min_deaths_per_fs_city <- combined_data %>% 
   filter(deaths_per_fs == min(deaths_per_fs)) %>%
   pull(Location_Name)
+=======
+  
+my_spdf <- readOGR(
+  dsn = paste(getwd(), "/data/Municipal_Boundaries-shp/", sep = ""),
+  layer = "Municipal_Boundaries",
+  verbose = FALSE
+)
+>>>>>>> 35d36aab1b9b0a07bc0b138909060d331e5f4f3d
 
 # 
 # my_spdf <- readOGR(
@@ -30,7 +39,7 @@ spdf_fortified <- tidy(my_spdf, region = "CITYNAME")
 
 spdf_fortified <- spdf_fortified %>%
   rename(Location_Name = id) %>%
-  left_join(combined_data, by="Location_Name")
+  left_join(combined_data, by = "Location_Name")
 
 blank_theme <- theme_bw() +
   theme(
@@ -48,7 +57,7 @@ blank_theme <- theme_bw() +
 positives_per_fs_map <- ggplot() +
   geom_polygon(data = spdf_fortified,
                aes(x = long, y = lat, group = group, fill = positives_per_fs), 
-               color="white") +
+               color = "white") +
   scale_fill_gradient2(
     "Positives per Food Source",
     low = "white",
@@ -63,7 +72,7 @@ positives_per_fs_map <- ggplot() +
 deaths_per_fs_map <- ggplot() +
   geom_polygon(data = spdf_fortified,
                aes(x = long, y = lat, group = group, fill = deaths_per_fs), 
-               color="white") +
+               color = "white") +
   scale_fill_gradient2(
     "Deaths per Food Source",
     low = "white",
