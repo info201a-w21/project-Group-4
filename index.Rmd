@@ -7,8 +7,8 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 source('aggregate_table.R')
 source('map.R')
-#source('bargraph.R')
-#source('PieChart.R')
+source('bargraph.R')
+source('PieChart.R')
 ```
 ---
 ### Introduction:
@@ -40,6 +40,10 @@ kable(combined_data,
       align = "lccccc") 
 ```
 
+```{r echo = F}
+bar_graph
+```
+
 
 ```{r echo = F}
 deaths_per_fs_map
@@ -49,9 +53,6 @@ The municipality in King County with the highest concentration of COVID deaths
 to number of food sources seems to be the city of `r max_deaths_per_fs_city`.
 (Elaborate more.....)
 
-```{r echo = F}
- piechart
-```
 
 The pie chart represents a breakdown of the different communities being served at various operating emergency food resources during the COVID-19 pandemic. As we can see, among the five major communities being served, about `r youth_percent`% serves the Youth community, `r public_percent`% serves the general public community, `r older_percent`% serves the elderly community, `r students_percent`% serves the students community, `r other_percent`% serves the other community.
 

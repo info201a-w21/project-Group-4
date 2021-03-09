@@ -1,12 +1,10 @@
-install.packages("ggplot2") # once per machine
-library("ggplot2")          # in each relevant script
+library(ggplot2)          # in each relevant script
 library(dplyr)
 library(tidyverse)
+library(plotly)
 
 restaurants <- read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/Restaurants_Operating_during_COVID19.csv")
-View(restaurants)
 emergency <- read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/COVID_Emergency_Food_and_Meals_Seattle_and_King_County.csv")
-View(emergency)
 
 # Analyzing the break down for each communities that the emergency food resources serve
 emergency <- emergency %>%
@@ -70,5 +68,4 @@ piechart <- ggplot(data, aes(x = "", y=value, fill = Communities))+
   theme(plot.title = element_text(hjust = 0.5)) +
   ylab("Percentage of Emergency Food Resources Open (%)") +
   theme(legend.title = element_text(size = 12, face = "bold"))
-
 plot(piechart)
