@@ -3,8 +3,10 @@ library(countrycode)
 
 source("analysis.R")
 
-intro <- tabPanel(
-  "Introduction"
+intro <- tabPanel("Food Accessibility",
+  titlePanel("Food Accessibility in King County, WA during COVID-19 Pandemic"),
+  br(),
+  
 )
 
 interactive_one <- tabPanel(
