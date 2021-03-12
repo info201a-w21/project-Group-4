@@ -6,6 +6,8 @@ source("analysis.R")
 intro <- tabPanel("Food Accessibility",
   titlePanel("Food Accessibility in King County, WA during COVID-19 Pandemic"),
   br(),
+  img("", src = "https://api.time.com/wp-content/uploads/2020/11/Food_Banks_US_01COVID-Pandemic_.jpg?w=824&quality=70"),
+  br(), 
   
 )
 
