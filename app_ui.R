@@ -1,18 +1,22 @@
 library(shiny)
 library(countrycode)
 
-source("analysis.R")
 
 intro <- tabPanel("Food Accessibility",
   titlePanel("Food Accessibility in King County, WA during COVID-19 Pandemic"),
+  h4("By Abbie Sawyer, Annie Tu, Bruce Chen, Christine Nguyen"),
   br(),
-  img("", src = "https://api.time.com/wp-content/uploads/2020/11/Food_Banks_US_01COVID-Pandemic_.jpg?w=824&quality=70"),
+  img("", src = "https://crosscut.com/sites/default/files/styles/max_992x992/public/images/articles/200820_de_communityfridge_hero_teaser.jpg.jpg?itok=6mtc8jtm"),
   br(), 
+  br(),
   p("Another year into the pandemic, and the world is continuing to struggle with 
-  issues from a year ago. Worries about if a stimulus check will come, let alone in time.
-  Contemplating the state of one's mental health, exascerbated by isolation 
-  and social distancing. 
-  Food accessibility has become a major concern for people during the pandemic, 
+  issues from a year ago. Worriying if a stimulus check will come, let alone in time.
+  Contemplating the state of one's mental health, exacerbated by isolation 
+  and social distancing. Grappling with the reality that one might not be able to 
+  buy groceries until next week.", strong("This is a reality for many people, 
+                                          at home and abroad.")),
+  br(),
+  p("Food accessibility has become a major concern for people during the pandemic, 
     even more so than ever before. Due to rising unemployment and public regulation policies,
     the stability people may have experienced previously with food has undoubtedly changed.
     We wanted to investigate the relationship between COVID-19, the number of
@@ -21,9 +25,25 @@ intro <- tabPanel("Food Accessibility",
     specifically in King County. This will give us a better understanding of the situation,
     which can help both our own communities as well as others moving forward."),
   br(),
+  p("Within this project, we will showcasing three interactive visualizations
+    that will allow you to develop a nuanced understanding of food access in King County
+    during the last year or so."),
+  br(),
+  p(strong("Specific questions we wanted to answer:")),
+  p(em("Is there a correlation between the number of COVID cases and the number 
+       of operating restaurants in King County?")),
+  p(em("Does food accessibility (emergency or in general) have an impact on 
+           the increase or decrease of COVID-19 cases in King County?")),
+  p(em("Is there a correlation between the number of operating restaurants and 
+       the accessibility to emergency food resources?")),
+  br(), 
   p("Our datasets come from data.gov, data.seattle.gov, and kingcounty.gov. They contain data on
-  Emergency Food & Meals locations in Seattle and King County, restaurants still open during
-  COVID-19, and COVID-19 data in King County."),
+  Emergency Food & Meals locations in Seattle and King County, restaurants that are still operating 
+  during the pandemic, and COVID-19 cases and death tolls in King County."),
+  br(),
+  p(strong("The photo featured above is of a community fridge/food pantry located in 
+  the South Park neighborhood in south King County. These fridges provide free food
+  and enable disadvantaged communities to access the nourishment they need."))
 )
 
 interactive_one <- tabPanel(
@@ -39,11 +59,27 @@ interactive_three <- tabPanel(
 )
 
 conclusion <- tabPanel(
-  "Conclusion"
+  "Conclusions",
+  titlePanel("Project Reflections and Moving Forward"),
+  br(),
+  img("", src = "https://cdn.vox-cdn.com/thumbor/mU29W0ANw5NGxeqWb4GMFSS0mhE=/0x0:4463x2992/1200x675/filters:focal(909x653:1623x1367)/cdn.vox-cdn.com/uploads/chorus_image/image/61676585/Food_Bank__4_of_6_.0.jpg"),
+  br(),
+  br(),
+  p("As we continue through another year of the pandemic, it's important we deeply consider
+  the challenges our community faces and what we can do to mitigate those struggles. 
+  
+    "),
+  br(),
+  p("Abbie's Takeaway"),
+  br(),
+  p("Annie's Takeway"),
+  br(),
+  p("Bruce's Takeaway")
+  
 )
 
 ui <- navbarPage(
-  "Title", 
+  "Info 201 AD - Final Deliverable", 
   intro,        
   interactive_one,
   interactive_two,
