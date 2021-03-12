@@ -41,7 +41,7 @@ intro <- tabPanel("Food Accessibility",
   Emergency Food & Meals locations in Seattle and King County, restaurants that are still operating 
   during the pandemic, and COVID-19 cases and death tolls in King County."),
   br(),
-  p(strong("The photo featured above is of a community fridge/food pantry located in 
+  p(em("The photo featured above is of a community fridge/food pantry located in 
   the South Park neighborhood in south King County. These fridges provide free food
   and enable disadvantaged communities to access the nourishment they need."))
 )
@@ -67,14 +67,31 @@ conclusion <- tabPanel(
   br(),
   p("As we continue through another year of the pandemic, it's important we deeply consider
   the challenges our community faces and what we can do to mitigate those struggles. 
-  
-    "),
+  As you can see through our interactive pieces, the distribution of food access points is 
+  uneven, and that leaves certain communities, often lower in income and higher in 
+  diversity, with less resources to sustain themselves."),
   br(),
-  p("Abbie's Takeaway"),
+  p("With the trends and takeaways this project has illuminated, we hope to 
+    encourage our audiences to step back and reflect on the severity of the situation. 
+    Not everyone can donate time and/or food, but it's important to distribute resources, 
+    whenever we can. Whether it be information or support programs, we must circulate it,
+    in hopes it will reach the right people. We are beginning to see the 
+    light at the end of the tunnel, with vaccines being distributed, but food accessibility
+    will remain a pressing issue after it is over. Please continue sharing locations of 
+    community fridges, free food trucks, food banks, and other resources to help 
+    folks get through the pandemic."),
   br(),
-  p("Annie's Takeway"),
+  p(strong("Abbie's Takeaway")),
   br(),
-  p("Bruce's Takeaway")
+  p(strong("Annie's Takeway")),
+  br(),
+  p(strong("Bruce's Takeaway")),
+  br(),
+  p(em("The featured photo is of local community members at the White Center Food Bank.
+           This food bank is 40 years old and serves an unincorporated neighborhood 
+           in south King County, home to many BIPOC communities and new immigrants. 
+           Food banks have been an incredible place of support for vulnerable communities,
+           especially during these times."))
   
 )
 
