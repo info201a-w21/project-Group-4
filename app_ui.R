@@ -1,6 +1,7 @@
 library(shiny)
 library(countrycode)
 
+source("bargraph.R")
 
 intro <- tabPanel("Food Accessibility",
   titlePanel("Food Accessibility in King County, WA during COVID-19 Pandemic"),
@@ -48,7 +49,13 @@ intro <- tabPanel("Food Accessibility",
 )
 
 interactive_one <- tabPanel(
-  "Data"
+  "Bar Graph",
+  selectInput(
+    inputId = "city",
+    label = "Choose a city",
+    choices = cities,
+  ),
+  plotlyOutput("interactive_bar")
 )
 
 interactive_two <- tabPanel(

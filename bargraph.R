@@ -16,3 +16,14 @@ bar_graph <- ggplot(percentage) +
   scale_y_continuous(labels = scales::percent) +
   ggtitle("Percentage of COVID-19 Deaths by Age Group in King County") +
   labs(x = "Age Group", y = "Percentage of Deaths")
+
+# MAKING IT INTERACTIVE (a graph for selected city)
+by_city <- read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/unts-by-date-city-demography-jan-19.csv")
+
+# cities as input
+cities <- by_city %>% 
+  distinct(City)
+
+by_city <- by_city %>%
+  mutate(ratio = People_Tested / Population)
+#  
