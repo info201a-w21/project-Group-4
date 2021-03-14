@@ -63,7 +63,7 @@ interactive_two <- tabPanel(
   selectInput(
     inputId = "figure",
     label = "Choose a set of data frame to examine",
-    choices = c("ResourcesBreakDown", "CommunitiesBreakDown")
+    choices = c("Resources BreakDown", "Communities BreakDown")
   ),
   plotlyOutput("Pie")
 )

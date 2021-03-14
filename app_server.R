@@ -13,8 +13,11 @@ server <- function(input, output) {
   
   # Pie Chart Server
   output$Pie <- renderPlotly({
- # Not done
+  if (input$figure == "Resources BreakDown") {
     ResourcesBreakDown
+  } else {
+    CommunitiesBreakDown
+  }
     
   })
   
