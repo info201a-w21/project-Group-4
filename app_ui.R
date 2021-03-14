@@ -1,7 +1,7 @@
 library(shiny)
 library(countrycode)
-
 source("bargraph.R")
+source("PieChart.R")
 
 intro <- tabPanel("Food Accessibility",
   titlePanel("Food Accessibility in King County, WA during COVID-19 Pandemic"),
@@ -59,7 +59,13 @@ interactive_one <- tabPanel(
 )
 
 interactive_two <- tabPanel(
-  "Data"
+  "Pie Chart",
+  selectInput(
+    inputId = "figure",
+    label = "Choose a set of data frame to examine",
+    choices = c("ResourcesBreakDown", "CommunitiesBreakDown")
+  ),
+  plotlyOutput("Pie")
 )
 
 interactive_three <- tabPanel(
@@ -90,7 +96,13 @@ conclusion <- tabPanel(
     community fridges, free food trucks, food banks, and other resources to help 
     folks get through the pandemic."),
   br(),
-  p(strong("Abbie's Takeaway")),
+  p("Through the pie chart analysis of the types of food resources offered and the different communities
+    being served in King County. We noticed that the general younger population such as students and 
+    young adults have abundant of food resources to access during this pandemic. However, it was concerning
+    to see that the elderly population was the most underserved community and had less emergency food recource
+    access than the rest. The elderly community is considered as a high risk community during the pandemic,
+    they should be prioritized to be served in this extreme times, the data suggests otherwise. We should have more 
+    available food resources for the elderly to access during the pandemic."),
   br(),
   p(strong("Annie's Takeway")),
   br(),

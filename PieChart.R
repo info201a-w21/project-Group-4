@@ -1,21 +1,15 @@
-<<<<<<< HEAD
-library(ggplot2)          # in each relevant script
-=======
+library(ggplot2)        
 library(ggplot2)       
->>>>>>> 35d36aab1b9b0a07bc0b138909060d331e5f4f3d
 library(dplyr)
 library(tidyverse)
 library(plotly)
 
-<<<<<<< HEAD
 restaurants <- read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/Restaurants_Operating_during_COVID19.csv")
 emergency <- read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/COVID_Emergency_Food_and_Meals_Seattle_and_King_County.csv")
-=======
 restaurants <- 
   read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/Restaurants_Operating_during_COVID19.csv")
 emergency <- 
   read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/COVID_Emergency_Food_and_Meals_Seattle_and_King_County.csv")
->>>>>>> 35d36aab1b9b0a07bc0b138909060d331e5f4f3d
 
 # Analyzing the break down for each communities that the emergency food resources serve
 emergency <- emergency %>%
@@ -27,10 +21,58 @@ emergency <- emergency %>%
          Students = Who.They.Serve == "Seattle Public School Students",
          Other = Who.They.Serve == "Contact Agency for Any Eligibility Requirements")
 
+emergency <- emergency %>%
+  filter(Operational.Status == "Open") %>%
+  group_by(Food.Resource.Type) %>%
+  mutate(FoodBank = Food.Resource.Type == "Food Bank", 
+         FoodBankandMeal = Food.Resource.Type == "Food Bank & Meal",
+         Meal = Food.Resource.Type == "Meal",
+         StudentToGoMeals = Food.Resource.Type == "Student To-Go Meals")
+
 # The total numbers of emergency food resources open
 total_open <- emergency %>%
   filter(Operational.Status == "Open") %>%
   nrow()
+
+# Calculate the percentages of each communities
+FoodBank_num <- emergency %>%
+  filter(FoodBank) %>%
+  nrow() 
+
+FoodBank_percent <- round((FoodBank_num / total_open) * 100)
+
+# Calculate the percentages of each communities
+FoodBankandMeal_num <- emergency %>%
+  filter(FoodBankandMeal) %>%
+  nrow() 
+
+FoodBankandMeal_percent <- round((FoodBankandMeal_num / total_open) * 100)
+
+# Calculate the percentages of each communities
+Meal_num <- emergency %>%
+  filter(Meal) %>%
+  nrow() 
+
+Meal_percent <- round((Meal_num / total_open) * 100)
+
+# Calculate the percentages of each communities
+StudentToGoMeals_num <- emergency %>%
+  filter(Youth) %>%
+  nrow() 
+
+StudentToGoMeals_percent <- round((StudentToGoMeals_num / total_open) * 100)
+
+data <- data.frame(
+  Type = c("Food Bank", "Food Bank and Meal", "Meal", "Student To Go Meals"),
+  value = c(FoodBank_percent,
+            FoodBankandMeal_percent,
+            Meal_percent,
+            StudentToGoMeals_percent))
+
+ResourcesBreakDown <- plot_ly(data, labels = ~Type, values = ~value, type = 'pie')
+ResourcesBreakDown <- ResourcesBreakDown %>% layout(title = 'Breakdown of Types of Emergency Food Resources',
+                      xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+                      yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
 
 # Calculate the percentages of each communities
 youth_num <- emergency %>%
@@ -63,27 +105,15 @@ other_num <- emergency %>%
 
 other_percent <- round((other_num / total_open) * 100)
 
-data <- data.frame(
-  Communities = c("Youth", "Older", "Students", "Public", "Other"),
-  value = c(youth_percent, 
-            older_percent, 
-            students_percent, 
-            public_percent, 
-            other_percent)) %>%
-  arrange(desc(Communities)) %>%
-  mutate(lab.ypos = cumsum(value) - 0.5 * value,
-         label = value)
+data2 <- data.frame(
+  Type = c("Youth", "Older", "Students", "Public", "Other"),
+  value = c(youth_percent,
+            older_percent,
+            students_percent,
+            public_percent,
+            other_percent))
 
-# plot pie chart
-piechart <- ggplot(data, aes(x = "", y = value, fill = Communities)) +
-  geom_bar(width = 1, stat = "identity") + 
-  coord_polar("y", start = 0) +
-  geom_text(aes(y = lab.ypos, label = label, x = 1.2)) +
-  ggtitle("Breakdown of Communities Served (Operating Emergency Food Resources)") +
-  theme(plot.title = element_text(hjust = 0.5)) +
-  ylab("Percentage of Emergency Food Resources Open (%)") +
-  theme(legend.title = element_text(size = 12, face = "bold"))
-<<<<<<< HEAD
-plot(piechart)
-=======
->>>>>>> 35d36aab1b9b0a07bc0b138909060d331e5f4f3d
+CommunitiesBreakDown <- plot_ly(data2, labels = ~Type, values = ~value, type = 'pie')
+CommunitiesBreakDown <- CommunitiesBreakDown %>% layout(title = 'Breakdown of Communities Served (Operating Emergency Food Resources)',
+                      xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+                      yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
