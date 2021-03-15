@@ -1,5 +1,6 @@
 source("bargraph.R")
 source("PieChart.R")
+source("map.R")
 
 server <- function(input, output) {
   # not finished
@@ -13,12 +14,30 @@ server <- function(input, output) {
   
   # Pie Chart Server
   output$Pie <- renderPlotly({
-  if (input$figure == "Resources BreakDown") {
-    ResourcesBreakDown
-  } else {
-    CommunitiesBreakDown
-  }
-    
+    if (input$figure == "Resources BreakDown") {
+      ResourcesBreakDown
+    } else {
+      CommunitiesBreakDown
+    }
+  })
+  
+  # Map 
+  output$interactive_map <- renderPlotly({
+    if(input$map_data == "Positives"){
+      map <- positives_map
+    }else if(input$map_data == "Deaths"){
+      map <- deaths_map
+    }else if(input$map_data == "num_food_sources"){
+      map <- food_sources_map
+    }else if(input$map_data == "deaths_per_fs"){
+      map <- deaths_per_fs_map
+    }else if(input$map_data == "positives_per_fs"){
+      map <- positives_per_fs_map
+    }else{
+      
+    }
+    plotly_map <- ggplotly(map)
+    plotly_map
   })
   
 }

@@ -2,6 +2,10 @@
 library(tidyverse)
 library(plotly)
 library(shiny)
+library(rgdal)
+library(maptools)
+library(broom)
+library(ggplot2)
 
 source("app_server.R")
 source("app_ui.R")

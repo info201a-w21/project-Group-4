@@ -69,7 +69,15 @@ interactive_two <- tabPanel(
 )
 
 interactive_three <- tabPanel(
-  "Data"
+  "Map",
+  selectInput(inputId = "map_data",
+              label = "Choose a data to examine.",
+              choices =  c("Number of Food Sources" = "num_food_sources",
+                           "Highest Population" = "Positives",
+                           "Highest CO2 Growth Percentage" = "Deaths",
+                           "Highest Absolute CO2 Growth" = "deaths_per_fs",
+                           "Highest CO2 Per Capita" = "positives_per_fs")),
+  plotlyOutput("interactive_map")
 )
 
 conclusion <- tabPanel(
