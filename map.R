@@ -17,7 +17,7 @@ min_deaths_per_fs_city <- combined_data %>%
   pull(Location_Name)
   
 my_spdf <- readOGR(
-  dsn = paste0(getwd(), "/data/Municipal_Boundaries-shp/"),
+  dsn = "./data/Municipal_Boundaries-shp/",
   layer = "Municipal_Boundaries",
   verbose = FALSE
 )
@@ -32,7 +32,7 @@ my_spdf <- readOGR(
 # readOGR(dsn = "C:/Users/abbie/info201/project-Group-4data/Municipal_Boundaries-shp", layer = "Municipal_Boundaries")
 # tmp <- readOGR(paste0(getwd(), "data/Municipal_Boundaries-shp", "Municipal_Boundaries.shp"))
 
-my_spdf <- shapefile("data/Municipal_Boundaries-shp/Municipal_Boundaries.shp")
+#my_spdf <- shapefile("./data/Municipal_Boundaries-shp/Municipal_Boundaries.shp")
 spdf_fortified <- tidy(my_spdf, region = "CITYNAME")
 
 spdf_fortified <- spdf_fortified %>%
