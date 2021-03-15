@@ -112,9 +112,9 @@ conclusion <- tabPanel(
     they should be prioritized to be served in this extreme times, the data suggests otherwise. We should have more 
     available food resources for the elderly to access during the pandemic."),
   br(),
-  p(strong("Annie's Takeway")),
+  p(strong("Insert Annie's Takeway")),
   br(),
-  p(strong("Bruce's Takeaway")),
+  p(strong("Insert Bruce's Takeaway")),
   br(),
   p(em("The featured photo is of local community members at the White Center Food Bank.
            This food bank is 40 years old and serves an unincorporated neighborhood 
