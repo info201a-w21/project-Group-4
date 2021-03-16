@@ -9,7 +9,10 @@ server <- function(input, output) {
     the_city <- by_city %>% 
       filter(City == input$city)
     new_bar_graph <- ggplot(data = the_city) +
-      geom_col(mapping = aes(x = Age_Group, y = ratio))
+      geom_col(mapping = aes(x = Age_Group, y = ratio)) +
+      ggtitle(paste("COVID-10 Testing Rate by Age Group in ", input$city)) +
+      xlab("Age Group") +
+      ylab("Testing rate")
     ggplotly(new_bar_graph)
   })
   
