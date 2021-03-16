@@ -74,10 +74,15 @@ interactive_three <- tabPanel(
               label = "Choose a data to examine.",
               choices =  c("Number of Food Sources" = "num_food_sources",
                            "Highest Population" = "Positives",
-                           "Highest CO2 Growth Percentage" = "Deaths",
-                           "Highest Absolute CO2 Growth" = "deaths_per_fs",
-                           "Highest CO2 Per Capita" = "positives_per_fs")),
-  plotlyOutput("interactive_map")
+                           "Highest Deaths" = "Deaths",
+                           "Deaths Per Food Source" = "deaths_per_fs",
+                           "Positive Tests Per Food Source" = "positives_per_fs")),
+  plotlyOutput("interactive_map"),
+  p("This map further shows relevant data for food supply and Covid deaths and 
+  positive tests and attempts to create a comparable metric to analyze across 
+  most cities in King County. In doing this the goal is to find areas in King 
+  County that may not have adequate support in supplying food to its community.
+  ")
 )
 
 conclusion <- tabPanel(
@@ -114,7 +119,12 @@ conclusion <- tabPanel(
   br(),
   p(strong("Insert Annie's Takeway")),
   br(),
-  p(strong("Insert Bruce's Takeaway")),
+  p("Through the map it is noticeable that areas outside the center of Seattle had a much higher 
+    death to number of food sources rate. Also there seems to be a lack of food sources outside 
+    the center city which is concerning. Food is a necessity to life and in areas where there are 
+    more people who rely on free food, even not because of Covid-19, there is not enough of it. 
+    This shows that a lot of the emergency food is misallocated in King County and is a problem 
+    that needs to be addressed."),
   br(),
   p(em("The featured photo is of local community members at the White Center Food Bank.
            This food bank is 40 years old and serves an unincorporated neighborhood 

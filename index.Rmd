@@ -76,7 +76,7 @@ deaths_per_fs_map
 ```
 >>>>>>> 35d36aab1b9b0a07bc0b138909060d331e5f4f3d
 
-The municipality in King County with the highest concentration of COVID deaths to number of food sources seems to be the city of `r max_deaths_per_fs_city` and the lowest concentration seems to be in the city/cities of `r min_deaths_per_fs_city`. This table further shows relevant data for food supply and Covid deaths and positive tests and attempts to make create a comparable metric to analyze across most cities in King County. In doing this the goal is to find areas in King County that may not have adequate support in supplying food to its community.
+The municipality in King County with the highest concentration of COVID deaths to number of food sources seems to be the city of `r max_deaths_per_fs_city` and the lowest concentration seems to be in the city/cities of `r min_deaths_per_fs_city`. This map further shows relevant data for food supply and Covid deaths and positive tests and attempts to create a comparable metric to analyze across most cities in King County. In doing this the goal is to find areas in King County that may not have adequate support in supplying food to its community.
 
 ```{r echo = F}
 piechart
