@@ -1,7 +1,7 @@
 # Bar graph of deaths by age group in King County
 
 library(tidyverse)
-age_data <- 
+age_data <-
   read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/nts-by-date-all-demographics-jan-19.csv")
 
 percentage <- age_data %>%
@@ -21,9 +21,9 @@ bar_graph <- ggplot(percentage) +
 by_city <- read.csv("https://raw.githubusercontent.com/info201a-w21/project-Group-4/main/data/unts-by-date-city-demography-jan-19.csv")
 
 # cities as input
-cities <- by_city %>% 
+cities <- by_city %>%
   distinct(City)
 
 by_city <- by_city %>%
   mutate(ratio = People_Tested / Population)
-#  
+#

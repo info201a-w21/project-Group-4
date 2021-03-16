@@ -3,7 +3,8 @@ source("PieChart.R")
 source("map.R")
 
 server <- function(input, output) {
-  # not finished
+  # interactive bar graph of how many people got tested compared to population
+  # for each age group
   output$interactive_bar <- renderPlotly({
     the_city <- by_city %>% 
       filter(City == input$city)

@@ -3,13 +3,16 @@ library(countrycode)
 source("bargraph.R")
 source("PieChart.R")
 
-intro <- tabPanel("Food Accessibility",
+intro <- tabPanel(
+  "Food Accessibility",
   titlePanel("Food Accessibility in King County, WA during COVID-19 Pandemic"),
   h4("By Abbie Sawyer, Annie Tu, Bruce Chen, Christine Nguyen"),
   br(),
-  img("", src = "https://crosscut.com/sites/default/files/styles/max_992x992/public/images/articles/200820_de_communityfridge_hero_teaser.jpg.jpg?itok=6mtc8jtm",
-      height = "50%", width = "50%"),
-  br(), 
+  img("",
+    src = "https://crosscut.com/sites/default/files/styles/max_992x992/public/images/articles/200820_de_communityfridge_hero_teaser.jpg.jpg?itok=6mtc8jtm",
+    height = "50%", width = "50%"
+  ),
+  br(),
   br(),
   p("Another year into the pandemic, and the world is continuing to struggle with 
   issues from a year ago. Worriying if a stimulus check will come, let alone in time.
@@ -38,7 +41,7 @@ intro <- tabPanel("Food Accessibility",
            the increase or decrease of COVID-19 cases in King County?")),
   p(em("Is there a correlation between the number of operating restaurants and 
        the accessibility to emergency food resources?")),
-  br(), 
+  br(),
   p("Our datasets come from data.gov, data.seattle.gov, and kingcounty.gov. They contain data on
   Emergency Food & Meals locations in Seattle and King County, restaurants that are still operating 
   during the pandemic, and COVID-19 cases and death tolls in King County."),
@@ -55,7 +58,15 @@ interactive_one <- tabPanel(
     label = "Choose a city",
     choices = cities,
   ),
-  plotlyOutput("interactive_bar")
+  plotlyOutput("interactive_bar"),
+  br(),
+  p("This bar graph shows how many people from each age group got tested as
+    compared to the population. It is visible that across all the cities in
+    King County, people aged 20-29 had the highest testing rate, which could 
+    mean that they either have more accessibility to tests or need to take them
+    more often. There may also be a disproportionate distribution of tests 
+    across these different age group, and people may not know how to access the
+    tests or are worried about the risks of taking one.")
 )
 
 interactive_two <- tabPanel(
@@ -70,13 +81,17 @@ interactive_two <- tabPanel(
 
 interactive_three <- tabPanel(
   "Map",
-  selectInput(inputId = "map_data",
-              label = "Choose a data to examine.",
-              choices =  c("Number of Food Sources" = "num_food_sources",
-                           "Highest Population" = "Positives",
-                           "Highest Deaths" = "Deaths",
-                           "Deaths Per Food Source" = "deaths_per_fs",
-                           "Positive Tests Per Food Source" = "positives_per_fs")),
+  selectInput(
+    inputId = "map_data",
+    label = "Choose a data to examine.",
+    choices = c(
+      "Number of Food Sources" = "num_food_sources",
+      "Highest Population" = "Positives",
+      "Highest Deaths" = "Deaths",
+      "Deaths Per Food Source" = "deaths_per_fs",
+      "Positive Tests Per Food Source" = "positives_per_fs"
+    )
+  ),
   plotlyOutput("interactive_map"),
   p("This map further shows relevant data for food supply and Covid deaths and 
   positive tests and attempts to create a comparable metric to analyze across 
@@ -89,8 +104,10 @@ conclusion <- tabPanel(
   "Conclusions",
   titlePanel("Project Reflections and Moving Forward"),
   br(),
-  img("", src = "https://cdn.vox-cdn.com/thumbor/mU29W0ANw5NGxeqWb4GMFSS0mhE=/0x0:4463x2992/1200x675/filters:focal(909x653:1623x1367)/cdn.vox-cdn.com/uploads/chorus_image/image/61676585/Food_Bank__4_of_6_.0.jpg",
-      height = "60%", width = "50%"),
+  img("",
+    src = "https://cdn.vox-cdn.com/thumbor/mU29W0ANw5NGxeqWb4GMFSS0mhE=/0x0:4463x2992/1200x675/filters:focal(909x653:1623x1367)/cdn.vox-cdn.com/uploads/chorus_image/image/61676585/Food_Bank__4_of_6_.0.jpg",
+    height = "60%", width = "50%"
+  ),
   br(),
   br(),
   p("As we continue through another year of the pandemic, it's important we deeply consider
@@ -117,7 +134,12 @@ conclusion <- tabPanel(
     they should be prioritized to be served in this extreme times, the data suggests otherwise. We should have more 
     available food resources for the elderly to access during the pandemic."),
   br(),
-  p(strong("Insert Annie's Takeway")),
+  p("The bar graph shows how there is a disparity in either accessibility or willingness to take COVID tests across
+    different age groups. Young people (20-29) had the highest test-taking rate in most cities in King County. However,
+    in the previous assignment, the static bar graph showed that older people had the highest death rate. This might be due 
+    to a lack of taking tests or awareness about the virus, or just simply age and immune systems. Younger people might be
+    more cautious and diligent about getting tested often if they are working or seeing friends, while older people might 
+    not want to take the risk and stay home instead."),
   br(),
   p("Through the map it is noticeable that areas outside the center of Seattle had a much higher 
     death to number of food sources rate. Also there seems to be a lack of food sources outside 
@@ -131,12 +153,11 @@ conclusion <- tabPanel(
            in south King County, home to many BIPOC communities and new immigrants. 
            Food banks have been an incredible place of support for vulnerable communities,
            especially during these times."))
-  
 )
 
 ui <- navbarPage(
-  "Info 201 AD - Final Deliverable", 
-  intro,        
+  "Info 201 AD - Final Deliverable",
+  intro,
   interactive_one,
   interactive_two,
   interactive_three,
