@@ -17,10 +17,16 @@ min_deaths_per_fs_city <- combined_data %>%
   pull(Location_Name)
   
 my_spdf <- readOGR(
-  dsn = "./data/Municipal_Boundaries-shp/",
+  dsn = paste0(getwd(), "/data/Municipal_Boundaries-shp/"),
   layer = "Municipal_Boundaries",
   verbose = FALSE
 )
+
+#my_spdf <- readOGR(
+#  dsn = "/data/Municipal_Boundaries-shp/",
+#  layer = "Municipal_Boundaries",
+#  verbose = FALSE
+#)
 
 # 
 # my_spdf <- readOGR(
@@ -32,7 +38,6 @@ my_spdf <- readOGR(
 # readOGR(dsn = "C:/Users/abbie/info201/project-Group-4data/Municipal_Boundaries-shp", layer = "Municipal_Boundaries")
 # tmp <- readOGR(paste0(getwd(), "data/Municipal_Boundaries-shp", "Municipal_Boundaries.shp"))
 
-#my_spdf <- shapefile("./data/Municipal_Boundaries-shp/Municipal_Boundaries.shp")
 spdf_fortified <- tidy(my_spdf, region = "CITYNAME")
 
 spdf_fortified <- spdf_fortified %>%
@@ -51,7 +56,6 @@ blank_theme <- theme_bw() +
     panel.border = element_blank()
   )
 
-# print(positives_map) to view the map
 positives_per_fs_map <- ggplot() +
   geom_polygon(data = spdf_fortified,
                aes(x = long, y = lat, group = group, fill = positives_per_fs), 
@@ -66,7 +70,6 @@ positives_per_fs_map <- ggplot() +
   theme(plot.title = element_text(hjust = 0.5)) +
   labs(title = "King County Positive Tests per Food Source")
 
-# print(deaths_map) to view the map
 deaths_per_fs_map <- ggplot() +
   geom_polygon(data = spdf_fortified,
                aes(x = long, y = lat, group = group, fill = deaths_per_fs), 
@@ -75,7 +78,7 @@ deaths_per_fs_map <- ggplot() +
     "Deaths per Food Source",
     low = "white",
     mid = "yellow",
-    high = "red"
+    high = "blue"
   ) +
   blank_theme + 
   coord_map() +
@@ -90,8 +93,8 @@ deaths_map <- ggplot() +
     "Deaths",
     low = "white",
     mid = "yellow",
-    high = "red"
-  ) +
+    high = "blue"
+  )  +
   blank_theme + 
   coord_map() +
   theme(plot.title = element_text(hjust = 0.5)) +
@@ -105,7 +108,7 @@ positives_map <- ggplot() +
     "Positives",
     low = "white",
     mid = "yellow",
-    high = "red"
+    high = "blue"
   ) +
   blank_theme + 
   coord_map() +
@@ -120,8 +123,8 @@ food_sources_map <- ggplot() +
     "Number of Food Sources",
     low = "white",
     mid = "yellow",
-    high = "red"
-  ) +
+    high = "blue"
+  )  +
   blank_theme + 
   coord_map() +
   theme(plot.title = element_text(hjust = 0.5)) +

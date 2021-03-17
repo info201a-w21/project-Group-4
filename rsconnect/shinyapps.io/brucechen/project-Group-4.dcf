@@ -1,0 +1,13 @@
+name: project-Group-4
+title: project-Group-4
+username:
+account: brucechen
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3804019
+bundleId: 4355841
+url: https://brucechen.shinyapps.io/project-Group-4/
+when: 1615942050.18729
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: index_files/.DS_Store|index_files/figure-html/setup-1.png|index_files/figure-html/unnamed-chunk-2-1.png|index_files/figure-html/unnamed-chunk-3-1.png
