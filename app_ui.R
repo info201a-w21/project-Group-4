@@ -86,8 +86,8 @@ interactive_three <- tabPanel(
     label = "Choose a data to examine.",
     choices = c(
       "Number of Food Sources" = "num_food_sources",
-      "Highest Population" = "Positives",
-      "Highest Deaths" = "Deaths",
+      "Positive tests" = "Positives",
+      "Deaths" = "Deaths",
       "Deaths Per Food Source" = "deaths_per_fs",
       "Positive Tests Per Food Source" = "positives_per_fs"
     )
